@@ -1,0 +1,218 @@
+:root {
+  color-scheme: light;
+  --ink: #111;
+  --muted: #66615a;
+  --paper: #f6f4ef;
+  --sheet: #fffdf8;
+  --line: #d8d2c7;
+  --soft: #ece7dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-serif, Georgia, "Times New Roman", "Songti SC", serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.shell {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.nav,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.brand {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.brand,
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-mark {
+  display: block;
+  width: 126px;
+  height: auto;
+}
+
+.footer-brand .logo-mark {
+  width: 120px;
+}
+
+.nav-links,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero {
+  padding: 94px 0 70px;
+}
+
+.hero h1,
+.doc h1 {
+  margin: 0;
+  font-size: clamp(48px, 9vw, 104px);
+  line-height: 0.92;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.hero .lead {
+  max-width: 690px;
+  margin: 26px 0 0;
+  font-size: clamp(26px, 4vw, 46px);
+  line-height: 1.05;
+}
+
+.zh-line,
+.subline,
+.doc .meta {
+  max-width: 640px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.zh-line {
+  margin: 20px 0 0;
+  font-size: 19px;
+}
+
+.subline {
+  margin: 30px 0 0;
+  font-size: 17px;
+}
+
+.actions {
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.feature,
+.doc-card {
+  background: var(--sheet);
+  padding: 24px;
+}
+
+.feature h2,
+.doc h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 520;
+}
+
+.feature p,
+.doc p,
+.doc li {
+  margin: 0;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+}
+
+.doc {
+  padding: 72px 0;
+}
+
+.doc h1 {
+  font-size: clamp(42px, 7vw, 76px);
+}
+
+.doc .meta {
+  margin: 18px 0 34px;
+}
+
+.doc-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.doc-card p + p,
+.doc-card ul {
+  margin-top: 14px;
+}
+
+.doc-card ul {
+  padding-left: 20px;
+}
+
+.footer {
+  padding: 44px 0 10px;
+  border-top: 1px solid var(--line);
+  margin-top: 64px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 20px;
+  }
+
+  .nav,
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 70px 0 52px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
