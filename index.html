@@ -97,6 +97,29 @@
       line-height: 1;
     }
 
+    .logo-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 12px;
+      flex: 0 0 auto;
+      transform: translate(3px, 2px);
+    }
+
+    .logo-dots span {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--yellow);
+      display: block;
+    }
+
+    .read-logo .logo-dots span,
+    .orbit-logo .logo-dots span {
+      width: 14px;
+      height: 14px;
+    }
+
 
     .logo,
     .read-logo,
@@ -175,19 +198,23 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(54px, 7.6vw, 104px);
-      line-height: .9;
-      letter-spacing: -.078em;
-      font-weight: 920;
+      font-size: clamp(44px, 5.8vw, 76px);
+      line-height: 1.02;
+      letter-spacing: .055em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: rgba(245,244,239,.98);
     }
 
     .hero-copy {
-      margin: 38px 0 0;
-      max-width: 430px;
-      font-size: clamp(18px, 2.05vw, 29px);
-      line-height: 1.14;
-      letter-spacing: -.038em;
-      color: rgba(245,244,239,.84);
+      margin: 26px 0 42px;
+      max-width: 560px;
+      font-size: clamp(16px, 1.45vw, 23px);
+      line-height: 1.34;
+      letter-spacing: .09em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: rgba(245,244,239,.92);
     }
 
     .hero-copy .break { display: block; }
@@ -197,7 +224,6 @@
       gap: 12px;
       flex-wrap: wrap;
       align-items: center;
-      margin-top: 42px;
     }
 
     .micro {
@@ -227,16 +253,13 @@
 
     .chat-stage {
       position: relative;
-      min-height: 560px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height: 610px;
     }
 
     .chat-window {
       position: relative;
-      width: min(640px, 100%);
-      height: 520px;
+      width: 100%;
+      height: 560px;
       background: #0b0b0b;
       border: 1px solid rgba(245,244,239,.15);
       box-shadow: 0 36px 90px rgba(0,0,0,.48);
@@ -275,23 +298,14 @@
     .selected {
       display: inline;
       padding: 2px 0;
+      background: linear-gradient(transparent 47%, rgba(242,214,75,.85) 47%);
       color: var(--paper);
-      background-image: linear-gradient(rgba(242,214,75,.9), rgba(242,214,75,.9));
-      background-repeat: no-repeat;
-      background-position: 0 100%;
-      background-size: 0% 46%;
-      animation: heroHighlight 5.8s cubic-bezier(.22,.78,.18,1) infinite;
-    }
-
-    @keyframes heroHighlight {
-      0%, 12% { background-size: 0% 46%; }
-      44%, 100% { background-size: 100% 46%; }
     }
 
     .color-pop {
       position: absolute;
-      left: 52px;
-      top: 252px;
+      left: 48px;
+      top: 270px;
       display: grid;
       grid-template-columns: 132px 100px;
       height: 48px;
@@ -302,15 +316,6 @@
       letter-spacing: .15em;
       text-transform: uppercase;
       z-index: 4;
-      opacity: 0;
-      transform: translateY(14px) scale(.985);
-      transform-origin: left top;
-      animation: colorPopReveal 5.8s cubic-bezier(.16,.84,.32,1) infinite;
-    }
-
-    @keyframes colorPopReveal {
-      0%, 44% { opacity: 0; transform: translateY(14px) scale(.985); }
-      52%, 100% { opacity: 1; transform: translateY(0) scale(1); }
     }
     .color-pop span {
       display: grid;
@@ -318,15 +323,6 @@
       color: var(--black);
       border-right: 1px solid var(--black);
       background: var(--yellow);
-      transform-origin: center;
-      animation: colorOnClick 5.8s cubic-bezier(.22,.8,.24,1) infinite;
-    }
-
-    @keyframes colorOnClick {
-      0%, 73%, 100% { transform: translateY(0) scale(1); filter: brightness(1); }
-      78% { transform: translateY(2px) scale(.985); filter: brightness(.96); }
-      82% { transform: translateY(0) scale(1.02); filter: brightness(1.04); }
-      88% { transform: translateY(0) scale(1); filter: brightness(1); }
     }
     .color-pop em {
       display: grid;
@@ -334,50 +330,6 @@
       color: var(--black);
       background: var(--paper);
       font-style: normal;
-    }
-
-    .hero-cursor {
-      position: absolute;
-      left: 220px;
-      top: 292px;
-      width: 28px;
-      height: 28px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M3 2 L20 17.5 L13.7 18.8 L17.3 26 L13.3 27 L9.8 19.7 L4 23 Z' fill='%23f6f4ef' stroke='%230b0b0b' stroke-width='1.4' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: contain;
-      filter: drop-shadow(0 8px 14px rgba(0,0,0,.36));
-      opacity: 0;
-      z-index: 6;
-      pointer-events: none;
-      animation: cursorMove 5.8s cubic-bezier(.2,.78,.25,1) infinite;
-    }
-
-    .hero-cursor::after {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 2px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(242,214,75,0);
-      opacity: 0;
-      animation: cursorPulse 5.8s cubic-bezier(.2,.8,.2,1) infinite;
-    }
-
-    @keyframes cursorMove {
-      0%, 58% { opacity: 0; transform: translate(78px, 10px) scale(.98); }
-      66% { opacity: 1; transform: translate(78px, 10px) scale(1); }
-      76% { opacity: 1; transform: translate(0, 0) scale(1); }
-      80% { opacity: 1; transform: translate(-2px, 2px) scale(.98); }
-      86% { opacity: 1; transform: translate(0, 0) scale(1); }
-      100% { opacity: 0; transform: translate(0, 0) scale(1); }
-    }
-
-    @keyframes cursorPulse {
-      0%, 76%, 100% { opacity: 0; box-shadow: 0 0 0 0 rgba(242,214,75,0); }
-      80% { opacity: 1; box-shadow: 0 0 0 0 rgba(242,214,75,.7); }
-      92% { opacity: 0; box-shadow: 0 0 0 18px rgba(242,214,75,0); }
     }
 
     .moments-panel {
@@ -468,6 +420,216 @@
       color: var(--paper);
     }
 
+
+    .selected {
+      background-image: linear-gradient(rgba(242,214,75,.9), rgba(242,214,75,.9));
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: 0% 58%;
+      animation: highlightSweep 6.2s linear infinite;
+    }
+
+    .color-pop {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: colorPopReveal 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    .color-pop span {
+      transform-origin: center center;
+      animation: colorOnPress 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    .moments-panel {
+      overflow: hidden;
+    }
+
+    .moment-card,
+    .panel-foot {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    .moment-card.q-card {
+      animation: collectCardOne 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    .moment-card.a-card {
+      animation: collectCardTwo 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    .moment-card.q-card {
+      position: relative;
+    }
+
+    .moment-card.q-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(242,214,75,0);
+      background: rgba(242,214,75,0);
+      pointer-events: none;
+      animation: qCardBackPulse 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    .panel-foot {
+      animation: collectFoot 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    @keyframes qCardBackPulse {
+      0%, 58% { border-color: rgba(242,214,75,0); background: rgba(242,214,75,0); }
+      63% { border-color: rgba(242,214,75,.45); background: rgba(242,214,75,.08); }
+      66% { border-color: rgba(242,214,75,0); background: rgba(242,214,75,0); }
+      69% { border-color: rgba(242,214,75,.52); background: rgba(242,214,75,.11); }
+      73% { border-color: rgba(242,214,75,0); background: rgba(242,214,75,0); }
+      100% { border-color: rgba(242,214,75,0); background: rgba(242,214,75,0); }
+    }
+
+    .demo-cursor {
+      position: absolute;
+      left: 108px;
+      top: 170px;
+      width: 24px;
+      height: 31px;
+      z-index: 13;
+      pointer-events: none;
+      opacity: 0;
+      animation: cursorTrack 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.38));
+    }
+
+    .demo-cursor::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #fffdf8;
+      clip-path: polygon(0 0, 0 100%, 23% 76%, 40% 100%, 56% 92%, 42% 64%, 78% 64%);
+      border: 1px solid rgba(0,0,0,.18);
+    }
+
+    .demo-cursor::after {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba(242,214,75,.75);
+      border-radius: 50%;
+      left: 8px;
+      top: 8px;
+      opacity: 0;
+      transform: scale(.45);
+      animation: clickPulse 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    .jump-back-feedback {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      padding: 10px 12px;
+      background: rgba(5,5,5,.96);
+      color: var(--paper);
+      border: 1px solid rgba(245,244,239,.18);
+      box-shadow: 0 14px 32px rgba(0,0,0,.34);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(8px);
+      z-index: 12;
+      animation: jumpBackFeedback 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+      pointer-events: none;
+    }
+
+    .chat-window::after {
+      content: '';
+      position: absolute;
+      left: 40px;
+      top: 150px;
+      width: 448px;
+      height: 112px;
+      border: 1px solid rgba(242,214,75,.86);
+      background: rgba(242,214,75,.07);
+      box-shadow: inset 0 0 0 1px rgba(242,214,75,.18), 0 0 0 10px rgba(242,214,75,.02);
+      opacity: 0;
+      z-index: 2;
+      pointer-events: none;
+      animation: sourceSceneFlash 6.2s cubic-bezier(.25,.1,.2,1) infinite;
+    }
+
+    @keyframes jumpBackFeedback {
+      0%, 76% { opacity: 0; transform: translateY(8px); }
+      80%, 92% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(8px); }
+    }
+
+    @keyframes sourceSceneFlash {
+      0%, 77% { opacity: 0; }
+      81%, 91% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes highlightSweep {
+      0%, 7% { background-size: 0% 58%; }
+      19%, 100% { background-size: 100% 58%; }
+    }
+
+    @keyframes colorPopReveal {
+      0%, 20% { opacity: 0; transform: translateY(6px); }
+      25%, 32% { opacity: 1; transform: translateY(0); }
+      33%, 100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes colorOnPress {
+      0%, 27% { transform: scale(1); filter: brightness(1); }
+      30% { transform: scale(.95); filter: brightness(.94); }
+      33% { transform: scale(1); filter: brightness(1.04); }
+      100% { transform: scale(1); filter: brightness(1); }
+    }
+
+    @keyframes collectCardOne {
+      0%, 34% { opacity: 0; transform: translateY(12px); }
+      41%, 100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes collectCardTwo {
+      0%, 38% { opacity: 0; transform: translateY(12px); }
+      45%, 100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes collectFoot {
+      0%, 42% { opacity: 0; transform: translateY(10px); }
+      49%, 100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes cursorTrack {
+      0%, 21% { transform: translate(342px, 132px) scale(1); opacity: 0; }
+      25% { transform: translate(6px, 124px) scale(1); opacity: 1; }
+      30% { transform: translate(6px, 124px) scale(.94); opacity: 1; }
+      34% { transform: translate(10px, 126px) scale(1); opacity: 1; }
+      42% { transform: translate(52px, 162px) scale(1); opacity: 0; }
+      55% { transform: translate(285px, 328px) scale(1); opacity: 0; }
+      59% { transform: translate(285px, 328px) scale(1); opacity: 1; }
+      62% { transform: translate(285px, 328px) scale(.94); opacity: 1; }
+      65% { transform: translate(287px, 330px) scale(1); opacity: 1; }
+      68% { transform: translate(285px, 328px) scale(.94); opacity: 1; }
+      72% { transform: translate(287px, 330px) scale(1); opacity: 1; }
+      77% { transform: translate(190px, 146px) scale(1); opacity: 0; }
+      100% { transform: translate(190px, 146px) scale(1); opacity: 0; }
+    }
+
+    @keyframes clickPulse {
+      0%, 28% { opacity: 0; transform: scale(.45); }
+      30% { opacity: .95; transform: scale(.82); }
+      36% { opacity: 0; transform: scale(1.45); }
+      59% { opacity: 0; transform: scale(.45); }
+      62% { opacity: .9; transform: scale(.82); }
+      65% { opacity: 0; transform: scale(1.25); }
+      68% { opacity: .9; transform: scale(.82); }
+      73% { opacity: 0; transform: scale(1.45); }
+      100% { opacity: 0; transform: scale(1.45); }
+    }
+
     .paper-section {
       background: var(--paper);
       color: var(--black);
@@ -497,6 +659,13 @@
       font-weight: 930;
     }
 
+    .section-title.clean-title {
+      font-size: clamp(34px, 4.8vw, 64px);
+      line-height: 1.02;
+      letter-spacing: .02em;
+      font-weight: 800;
+    }
+
     .section-copy {
       margin: 24px 0 0;
       font-size: clamp(18px, 2vw, 26px);
@@ -504,6 +673,40 @@
       letter-spacing: -.04em;
       color: rgba(0,0,0,.72);
       max-width: 620px;
+    }
+
+
+    .dark-clean-title {
+      color: var(--paper);
+    }
+
+    .immersive-read-wrap {
+      margin-top: 54px;
+      border: 1px solid rgba(245,244,239,.12);
+      background: rgba(255,255,255,.02);
+      overflow: hidden;
+      box-shadow: 0 38px 100px rgba(0,0,0,.26);
+    }
+
+    .immersive-read-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    .export-page-wrap {
+      margin-top: 54px;
+      border: 1px solid rgba(245,244,239,.12);
+      background: rgba(255,255,255,.02);
+      overflow: hidden;
+      box-shadow: 0 38px 100px rgba(0,0,0,.26);
+    }
+
+    .export-page-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .steps {
@@ -591,10 +794,11 @@
     }
     .experience-title {
       margin: 0 0 12px;
-      font-size: clamp(35px, 3.2vw, 48px);
-      line-height: .9;
-      letter-spacing: -.08em;
-      font-weight: 940;
+      font-size: clamp(28px, 2.5vw, 38px);
+      line-height: 1.02;
+      letter-spacing: .06em;
+      font-weight: 800;
+      text-transform: none;
     }
     .experience-copy {
       margin: 0;
@@ -1059,6 +1263,51 @@
       text-transform: uppercase;
       background: var(--paper);
       margin-left: -1px;
+      position: relative;
+      z-index: 2;
+    }
+    .qa-action.is-back {
+      animation: readBackPulse 5.6s ease-in-out infinite;
+    }
+    .read-back-preview {
+      position: absolute;
+      right: 34px;
+      bottom: 66px;
+      width: 214px;
+      background: var(--black);
+      color: var(--paper);
+      padding: 14px 16px 16px;
+      box-shadow: 0 26px 55px rgba(0,0,0,.28);
+      opacity: 0;
+      transform: translateY(8px) scale(.98);
+      transform-origin: bottom right;
+      animation: backPreviewReveal 5.6s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .read-back-preview .label {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: .18em;
+      font-weight: 900;
+      color: rgba(245,244,239,.58);
+    }
+    .read-back-preview .line {
+      height: 8px;
+      background: rgba(245,244,239,.15);
+      margin-bottom: 9px;
+    }
+    .read-back-preview .line.w1 { width: 88%; }
+    .read-back-preview .line.w2 { width: 72%; }
+    .read-back-preview .line.w3 { width: 54%; margin-bottom: 0; }
+    @keyframes readBackPulse {
+      0%, 58%, 100% { background: var(--paper); color: var(--black); }
+      64%, 76% { background: var(--black); color: var(--paper); }
+    }
+    @keyframes backPreviewReveal {
+      0%, 60%, 100% { opacity: 0; transform: translateY(8px) scale(.98); }
+      68%, 82% { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .dark-section {
@@ -1223,7 +1472,6 @@
       position: relative;
       height: 360px;
       background: var(--black);
-      border: 1px solid rgba(245,244,239,.12);
       overflow: hidden;
     }
     .bubble {
@@ -1255,11 +1503,19 @@
     .orbit-logo {
       position: absolute;
       left: 50%;
-      bottom: 28px;
+      bottom: -32px;
       transform: translateX(-50%);
     }
     .orbit-logo .logo-mark { width: 152px; }
 
+    .orbit-section {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+    }
+
+    .orbit {
+      overflow: visible;
+    }
     .compact-features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1295,18 +1551,19 @@
     }
     .final h2 {
       margin: 0 auto;
-      max-width: 800px;
-      font-size: clamp(50px, 8vw, 104px);
-      line-height: .88;
-      letter-spacing: -.082em;
+      max-width: 760px;
+      font-size: clamp(38px, 5.4vw, 72px);
+      line-height: 1.04;
+      letter-spacing: .02em;
+      font-weight: 800;
     }
     .final p {
-      margin: 28px auto 34px;
-      max-width: 510px;
+      margin: 26px auto 34px;
+      max-width: 620px;
       color: rgba(0,0,0,.63);
-      font-size: 22px;
-      line-height: 1.2;
-      letter-spacing: -.04em;
+      font-size: 18px;
+      line-height: 1.42;
+      letter-spacing: -.015em;
     }
     .final .button {
       background: var(--black);
@@ -1456,7 +1713,7 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="logo" href="./index.html" aria-label="colooon home"><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></a>
+      <a class="logo" href="./index.html" aria-label="colooon home"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></a>
       <div class="nav-links">
         <a class="button nav-cta" href="#install">Add to Chrome</a>
       </div>
@@ -1467,13 +1724,14 @@
     <section class="hero">
       <div class="inner hero-grid">
         <div>
-          <h1>Colooon it.</h1>
+                    <h1>Colooon it.</h1>
           <p class="hero-copy">
-            Keep the sparks from
-            <span class="break">AI conversations.</span>
+            Color On
+            <span class="break">the insights you want to keep.</span>
           </p>
           <div class="hero-actions">
             <a class="button" href="#install">Add to Chrome</a>
+            <a class="button outline-button" href="#demo">See how it works</a>
           </div>
         </div>
 
@@ -1501,8 +1759,31 @@
               <span>Color On</span>
               <em>Note</em>
             </div>
-            <div class="hero-cursor" aria-hidden="true"></div>
           </div>
+
+          <aside class="moments-panel" aria-label="Colored Moments panel">
+            <div class="panel-head">
+              <div>Colored Moments</div>
+              <div>MD</div>
+              <div>×</div>
+            </div>
+            <div class="search-line">Search question / colored / note</div>
+            <div class="moment-card q-card">
+              <div class="moment-tag">Q</div>
+              <div class="moment-text">What is consciousness?</div>
+            </div>
+            <div class="moment-card a-card">
+              <div class="moment-tag">A</div>
+              <div class="moment-text">Humans have experience. Large Language Models have expression without experience.</div>
+            </div>
+            <div class="panel-foot">
+              <div>Select Export</div>
+              <div>Full MD</div>
+            </div>
+          </aside>
+
+          <div class="demo-cursor" aria-hidden="true"></div>
+          <div class="jump-back-feedback" aria-hidden="true">Back to the Scene</div>
         </div>
       </div>
     </section>
@@ -1528,7 +1809,7 @@
             </div>
             <div>
               <h3 class="experience-title">Color On</h3>
-              <p class="experience-copy">Color On the insights you want to keep.</p>
+              <p class="experience-copy">The insights you want to keep.</p>
             </div>
           </article>
 
@@ -1554,8 +1835,8 @@
               </div>
             </div>
             <div>
-              <h3 class="experience-title">BACK</h3>
-              <p class="experience-copy">Return from Colored Moments to the source conversation.</p>
+              <h3 class="experience-title">Back</h3>
+              <p class="experience-copy">Jump to the source conversation.</p>
             </div>
           </article>
 
@@ -1575,8 +1856,8 @@
               </div>
             </div>
             <div>
-              <h3 class="experience-title">TO CHAT</h3>
-              <p class="experience-copy">Send a colored moment back into chat and keep thinking from there.</p>
+              <h3 class="experience-title">To Chat</h3>
+              <p class="experience-copy">Bring a colored moment back into chat.</p>
             </div>
           </article>
         </div>
@@ -1588,17 +1869,17 @@
         <div class="split" style="margin-bottom: 54px;">
           <div>
             <div class="section-kicker">READ</div>
-            <h2 class="section-title">Read what you colored.</h2>
+            <h2 class="section-title clean-title">Everything you colored lives here.</h2>
           </div>
           <p class="section-copy">
-            A quieter, more immersive way
-            to read the insights you’ve collected.
+            Read, jump back, continue in chat,
+            or export — all in one place.
           </p>
         </div>
 
         <div class="read-demo">
           <aside class="read-side">
-            <div class="read-logo" aria-label="colooon"><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
+            <div class="read-logo" aria-label="colooon"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
             <div class="read-side-title"><span>Colored Moments</span><span>11</span></div>
             <div class="read-list">
               <div class="read-item active">Saving Meaningful Moments</div>
@@ -1629,9 +1910,15 @@
               <p><strong>What is consciousness?</strong></p>
               <p>It is the inner field where things show up: thoughts, colors, pain, memory, desire, fear, time, self.</p>
               <div class="qa-actions">
-                <div class="qa-action">BACK</div>
+                <div class="qa-action is-back">BACK</div>
                 <div class="qa-action">TO CHAT</div>
                 <div class="qa-action">EXPORT</div>
+              </div>
+              <div class="read-back-preview" aria-hidden="true">
+                <span class="label">SOURCE CONVERSATION</span>
+                <div class="line w1"></div>
+                <div class="line w2"></div>
+                <div class="line w3"></div>
               </div>
             </article>
 
@@ -1649,80 +1936,44 @@
       </div>
     </section>
 
-    <section class="section dark-section" id="image">
+    <section class="section dark-section" id="read-immersive">
       <div class="inner">
         <div class="split">
           <div>
-            <div class="section-kicker">READ &amp; EXPORT</div>
-            <h2 class="section-title">Read again. Export when needed.</h2>
+            <div class="section-kicker">READ</div>
+            <h2 class="section-title clean-title dark-clean-title">Immersive Reading.</h2>
           </div>
           <p class="section-copy">
-            Open in READ,
-            or export as MD, PDF, or IMAGE.
+            A quieter, more immersive way to revisit the insights you’ve kept.
           </p>
         </div>
 
-        <div class="image-export-wrap">
-          <div class="qan-window">
-            <div class="qan-top">
-              <div>EXPORT</div>
-              <div></div>
-              <div>Export</div>
-              <div>×</div>
-            </div>
-
-            <div class="qan-body">
-              <div>
-                <div class="export-paper">
-                  <div class="paper-label">IMAGE EXPORT</div>
-                  <div class="paper-title">Every generative interface will eventually need a human answer.</div>
-
-                  <div class="paper-rule"></div>
-                  <div class="paper-row">
-                    <div class="paper-tag">Q</div>
-                    <p>I think you’re good — can we continue?</p>
-                  </div>
-
-                  <div class="paper-rule"></div>
-                  <div class="paper-row">
-                    <div class="paper-tag">A</div>
-                    <p>Generate with extreme richness, and choose with restraint.</p>
-                  </div>
-
-                  <div class="paper-rule"></div>
-                  <div class="paper-row">
-                    <div class="paper-tag">N</div>
-                    <p>Can you pause in the flow to see which sentence is worth keeping?</p>
-                  </div>
-                </div>
-              </div>
-
-              <aside class="export-controls">
-                <div class="control-label">Title</div>
-                <div class="control-box">Every generative interface will eventually need a human answer. <span class="check"></span></div>
-
-                <div class="control-label">Output</div>
-                <div class="control-box">MD / PDF / IMAGE</div>
-                <div class="control-box" style="opacity:.46;">Auto Split</div>
-              </aside>
-            </div>
-          </div>
-
-          <div>
-            <div class="section-kicker">CAPTURE Q&amp;A</div>
-            <h2 class="section-title" style="font-size: clamp(36px, 4.8vw, 66px);">
-              Keep the exchange, not just the sentence.
-            </h2>
-            <p class="section-copy">
-              Some moments are a question and an answer that belong together.
-              Capture Q&amp;A keeps the whole exchange as one saved moment.
-            </p>
-          </div>
+        <div class="immersive-read-wrap">
+          <img src="./read-immersive.png" alt="Immersive reading view showing saved moments in a quiet reading layout">
         </div>
       </div>
     </section>
 
-    <section class="section dark-section" style="padding-top: 0;">
+    <section class="section dark-section" id="export">
+      <div class="inner">
+        <div class="split">
+          <div>
+            <div class="section-kicker">EXPORT</div>
+            <h2 class="section-title clean-title dark-clean-title">Export when needed.</h2>
+          </div>
+          <p class="section-copy">
+            Export as MD, PDF,<br>
+            or IMAGE.
+          </p>
+        </div>
+
+        <div class="export-page-wrap">
+          <img src="./export-page.png" alt="Export view showing MD, PDF, and image export options">
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section orbit-section" style="padding-top: 0;">
       <div class="inner">
         <div class="orbit" aria-label="Atmospheric floating colored moments">
           <div class="bubble">What is consciousness</div>
@@ -1732,27 +1983,12 @@
           <div class="bubble">Why do people die</div>
           <div class="orbit-logo" aria-label="colooon"><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
         </div>
-
-        <div class="compact-features">
-          <article class="compact-feature">
-            <h3>Colored Moments</h3>
-            <p>The sparks you keep drift into a field of thought. Click any star to return to it.</p>
-          </article>
-          <article class="compact-feature">
-            <h3>NOTE</h3>
-            <p>Write a note beside the moment. Keep the thought it sparked.</p>
-          </article>
-          <article class="compact-feature">
-            <h3>READ &amp; EXPORT</h3>
-            <p>Read what you colored. Open in READ, or export as MD, PDF, or IMAGE.</p>
-          </article>
-        </div>
       </div>
     </section>
 
     <section class="final" id="install">
       <div class="inner">
-        <h2>Keep the sparks from AI conversations.</h2>
+        <h2>A quiet way to keep the sparks of AI conversations.</h2>
         <p>Color On the insights you want to keep. Read them again. Come back to them anytime.</p>
         <a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
       </div>
@@ -1761,7 +1997,7 @@
 
   <footer>
     <div class="foot">
-      <div class="footer-brand" aria-label="colooon"><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
+      <div class="footer-brand" aria-label="colooon"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
       <span>Keep the sparks from AI conversations. Come back to them anytime.</span>
       <div class="footer-links">
         <a href="./privacy/index.html">Privacy</a>
