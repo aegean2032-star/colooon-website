@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>colooon — Keep sparks from AI conversations</title>
-  <meta name="description" content="Keep the sparks from AI conversations. Come back to them anytime." />
+  <meta name="description" content="A quiet way to keep the sparks of AI conversations. Color On the insights you want to keep." />
+  <link rel="alternate" hreflang="zh-CN" href="/zh/" />
+  <link rel="alternate" hreflang="en" href="/" />
   <style>
     :root {
       --black: #050505;
@@ -154,6 +156,9 @@
     }
 
     .nav-links a:hover { color: var(--paper); }
+    .nav-links .journal-link, .nav-links .lang-switch { color: rgba(245,244,239,.78); }
+    .nav-links .lang-switch { letter-spacing: .08em; }
+    .hero-eyebrow { margin: 0 0 18px; max-width: 420px; color: rgba(245,244,239,.54); font-size: 10px; line-height: 1.5; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
     .nav-cta {
       padding: 10px 13px !important;
       min-height: 36px !important;
@@ -1661,7 +1666,9 @@
       .mini-browser, .back-stage, .tochat-stage { max-width: 100%; }
       .scene-mini { width: 178px; }
       .saved-moment-mini { width: 194px; }
-      .nav-links a:not(.button) { display: none; }
+      .nav-links { gap: 12px; font-size: 9px; letter-spacing: .09em; }
+      .nav-links .journal-link, .nav-links .lang-switch { display: inline-flex; }
+      .nav-links .button { padding: 8px 9px !important; font-size: 8px !important; }
       .section { padding: 84px 0; }
       .hero { padding-top: 110px; }
       .chat-body { padding: 44px 30px; }
@@ -1709,12 +1716,15 @@
       }
     }
   </style>
+  <script src="/language.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="./index.html" aria-label="colooon home"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></a>
       <div class="nav-links">
+        <a class="journal-link" href="/journal/">Journal</a>
+        <a class="lang-switch" href="/zh/" data-language-choice="zh">中文</a>
         <a class="button nav-cta" href="#install">Add to Chrome</a>
       </div>
     </nav>
@@ -1724,7 +1734,8 @@
     <section class="hero">
       <div class="inner hero-grid">
         <div>
-                    <h1>Colooon it.</h1>
+          <p class="hero-eyebrow">A quiet way to keep the sparks of AI conversations.</p>
+          <h1>Colooon it.</h1>
           <p class="hero-copy">
             Color On
             <span class="break">the insights you want to keep.</span>
@@ -1988,8 +1999,8 @@
 
     <section class="final" id="install">
       <div class="inner">
-        <h2>A quiet way to keep the sparks of AI conversations.</h2>
-        <p>Color On the insights you want to keep. Read them again. Come back to them anytime.</p>
+        <h2>The conversation ends. The thought doesn’t have to.</h2>
+        <p>Save a moment. Return to the scene. Keep thinking.</p>
         <a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
       </div>
     </section>
@@ -2000,6 +2011,7 @@
       <div class="footer-brand" aria-label="colooon"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
       <span>Keep the sparks from AI conversations. Come back to them anytime.</span>
       <div class="footer-links">
+        <a href="/journal/">Journal</a>
         <a href="./privacy/index.html">Privacy</a>
         <a href="./support/index.html">Support</a>
         <a href="mailto:support@colooon.com">support@colooon.com</a>
