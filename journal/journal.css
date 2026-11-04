@@ -29,6 +29,11 @@ a:hover { color:var(--yellow); }
 .journal-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; padding-top:24px; }
 .journal-card { display:flex; flex-direction:column; min-width:0; border:1px solid rgba(245,244,239,.18); background:#0b0b0b; transition:border-color .2s ease, transform .2s ease; }
 .journal-card:hover { border-color:var(--yellow); transform:translateY(-3px); color:var(--paper); }
+/* Empty journal slots reserved for future entries. */
+.journal-card-placeholder { min-height:424px; cursor:default; transition:none; }
+.journal-card-placeholder:hover { border-color:rgba(245,244,239,.18); transform:none; }
+.journal-card-placeholder .journal-cover { background:#101010; }
+.journal-card-placeholder .journal-card-body { min-height:205px; padding:0; }
 .journal-cover { position:relative; display:block; overflow:hidden; aspect-ratio:16/9; background:#151515; border-bottom:1px solid var(--line); }
 .journal-cover img { width:100%; height:100%; object-fit:cover; display:block; opacity:.78; transition:transform .35s ease,opacity .25s ease; }
 .journal-card:hover .journal-cover img { transform:scale(1.025); opacity:.95; }
