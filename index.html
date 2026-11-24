@@ -1715,6 +1715,13 @@
         align-items: flex-start;
       }
     }
+    @media (max-width: 500px) {
+      .site-header { height: auto; }
+      .site-header .nav { min-height: 78px; height: auto; flex-wrap: wrap; gap: 8px 14px; padding-block: 11px; }
+      .site-header .logo .logo-mark { width: 100px; }
+      .site-header .nav-links { flex-wrap: wrap; gap: 5px 12px; }
+      .site-header .nav-links .purchase-link { display: inline-flex; }
+    }
   </style>
   <script src="/language.js" defer></script>
 </head>
@@ -1724,6 +1731,7 @@
       <a class="logo" href="./index.html" aria-label="colooon home"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></a>
       <div class="nav-links">
         <a class="journal-link" href="/journal/">Journal</a>
+        <a class="journal-link purchase-link" href="/purchase/">Trial & Purchase</a>
         <a class="lang-switch" href="/zh/" data-language-choice="zh">中文</a>
         <a class="button nav-cta" href="#install">Add to Chrome</a>
       </div>
@@ -2011,6 +2019,9 @@
       <div class="footer-brand" aria-label="colooon"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
       <span>Keep the sparks from AI conversations. Come back to them anytime.</span>
       <div class="footer-links">
+        <a href="/terms/">Terms of Service</a>
+        <a href="/refunds/">Refund Policy</a>
+        <a href="/purchase/">Trial & Purchase</a>
         <a href="/journal/">Journal</a>
         <a href="./privacy/index.html">Privacy</a>
         <a href="./support/index.html">Support</a>
