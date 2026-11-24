@@ -1716,6 +1716,13 @@
         align-items: flex-start;
       }
     }
+    @media (max-width: 500px) {
+      .site-header { height: auto; }
+      .site-header .nav { min-height: 78px; height: auto; flex-wrap: wrap; gap: 8px 14px; padding-block: 11px; }
+      .site-header .logo .logo-mark { width: 100px; }
+      .site-header .nav-links { flex-wrap: wrap; gap: 5px 12px; }
+      .site-header .nav-links .purchase-link { display: inline-flex; }
+    }
   </style>
 <script defer="" src="/language.js"></script>
 </head>
@@ -1725,7 +1732,8 @@
 <a aria-label="colooon home" class="logo" href="/zh/"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></a>
 <div class="nav-links">
 <a class="journal-link" href="/zh/journal/">日志</a>
-<a class="lang-switch" data-language-choice="en" href="/">EN</a>
+<a class="journal-link purchase-link" href="/zh/purchase/">试用与购买</a>
+        <a class="lang-switch" data-language-choice="en" href="/">EN</a>
 <a class="button nav-cta" href="#install">添加到 Chrome</a>
 </div>
 </nav>
@@ -1981,6 +1989,9 @@
 <div aria-label="colooon" class="footer-brand"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></div>
 <span>留住 AI 对话中的灵光，随时回到它们。</span>
 <div class="footer-links">
+        <a href="/zh/terms/">服务条款</a>
+<a href="/zh/refunds/">退款政策</a>
+<a href="/zh/purchase/">试用与购买</a>
 <a href="/zh/journal/">开发日记</a>
 <a href="./privacy/index.html">隐私政策</a>
 <a href="./support/index.html">支持</a>
