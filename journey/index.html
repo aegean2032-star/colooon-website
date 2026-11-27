@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journey · colooon</title>
+<link rel="alternate" hreflang="zh-CN" href="/zh/journey/">
+<link rel="stylesheet" href="/assets/journey.css">
+<link rel="stylesheet" href="/assets/site-shell.css">
+<script defer src="/language.js"></script>
+<script defer src="/assets/journey.js"></script>
+</head>
+<body class="site-journey">
+<!-- site-header -->
+<header class="site-chrome site-chrome-header">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/" aria-label="colooon · Home"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/journey/" aria-current="page">Journey</a>
+      <a href="/purchase/">Trial &amp; Purchase</a>
+      <a href="/zh/journey/" data-language-choice="zh" lang="zh-CN">中文</a>
+      <a class="site-chrome-install" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+<!-- /site-header -->
+<main class="shell">
+<section class="journey-page" id="journeyPage"><div class="page-intro"><div><div class="eyebrow">COLOOON / JOURNEY — 2026</div><h1>Journey<span style="color:var(--yellow)">.</span></h1></div><p>记录 colooon 的稳定功能、理念与持续演进。</p></div>
+<div class="page-switch" role="tablist" aria-label="Journey sections"><button class="active" data-tab="features" role="tab" aria-selected="true">FEATURES / 功能</button><button data-tab="ideas" role="tab" aria-selected="false">IDEAS / 理念</button><button data-tab="updates" role="tab" aria-selected="false">UPDATES / 更新</button><button data-tab="support" role="tab" aria-selected="false">SUPPORT / 支持</button></div>
+<div class="features-page journey-panel" id="featuresPage"><div class="section-head"><div><div class="eyebrow">01 / FEATURE GUIDES</div><h2>Features.</h2></div><p>已经落定的功能说明。了解 colooon 如何捕捉、整理、重访与延续 AI 对话中的思想。</p></div><div class="guide-grid" id="guideCards"></div></div>
+<div class="ideas-page journey-panel hidden" id="ideasPage"><div class="section-head"><div><div class="eyebrow">02 / IDEAS — COLOOON JOURNAL</div><h2>Ideas.</h2></div><p>关于思想、设计与人与 AI 的持续探索。</p></div><div class="grid3" id="ideaCards"></div></div>
+<div class="updates-page journey-panel hidden" id="updatesPage"><div class="section-head"><div><div class="eyebrow">03 / PRODUCT & RELEASE NOTES</div><h2>Updates.</h2></div><p>记录我们如何发现问题、修复问题，并让产品持续变得更可靠。</p></div><div class="updates-grid" id="releaseCards"></div></div>
+<div class="support-page journey-panel hidden" id="supportPage">
+  <div class="section-head">
+    <div><div class="eyebrow">04 / SUPPORT & PARTICIPATION</div><h2>Support.</h2></div>
+    <p>寻找答案、获取帮助、提交反馈，或分享你的故事。</p>
+  </div>
+  <div class="support-grid">
+    <button class="support-tile" type="button" onclick="openSupport(2)">
+      <span class="support-index">01 / FAQ</span><span class="support-symbol">↗</span>
+      <h3>Frequently asked questions</h3><p>查找关于产品使用、数据、隐私及许可证的答案。</p>
+      <span class="support-action">FIND ANSWERS ↗</span>
+    </button>
+    <button class="support-tile" type="button" onclick="openSupport(3)">
+      <span class="support-index">02 / CONTACT SUPPORT</span><span class="support-symbol">↗</span>
+      <h3>Contact support</h3><p>需要人工帮助？联系我们解决具体问题。</p>
+      <span class="support-action">CONTACT THE TEAM ↗</span>
+    </button>
+    <button class="support-tile" type="button" onclick="openSupport(0)">
+      <span class="support-index">03 / FEEDBACK</span><span class="support-symbol">↗</span>
+      <h3>Send feedback</h3><p>一个使用感受、一个不顺手的地方，或是一个突然冒出来的想法。我们很想听听。</p>
+      <span class="support-action">SEND FEEDBACK ↗</span>
+    </button>
+    <button class="support-tile" type="button" onclick="openSupport(1)">
+      <span class="support-index">04 / COLOOON STORIES</span><span class="support-symbol">↗</span>
+      <h3>Earn a free license</h3><p>分享你的 colooon 使用故事，参与活动，有机会赢取免费的 colooon Pro 永久许可证。</p>
+      <span class="support-action">JOIN THE PROGRAM ↗</span>
+    </button>
+  </div>
+</div>
+
+
+</section>
+</main>
+<!-- site-footer -->
+<footer class="site-chrome site-chrome-footer">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/" aria-label="colooon · Home"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="Site services">
+      <a href="/terms/">Terms</a>
+      <a href="/refunds/">Refunds</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/recover/">Recover license</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</footer>
+<!-- /site-footer -->
+<div class="detail" id="detail"><article class="detail-panel"><button class="close" onclick="closeDetail()">CLOSE ×</button><div id="detailBody"></div></article></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+:root {
+  --site-bg: #090909;
+  --site-ink: #f3f2ed;
+  --site-muted: #a5a39d;
+  --site-line: #393936;
+  --site-accent: #f0d23f;
+  --site-font: "Avenir Next", "Helvetica Neue", Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --site-max: 1500px;
+  --site-gutter: clamp(20px, 5.8vw, 87px);
+}
+
+body { margin: 0; font-family: var(--site-font); }
+.site-chrome { color: var(--site-ink); background: var(--site-bg); font: 12px/1.5 var(--site-font); letter-spacing: .02em; }
+.site-chrome *, .site-chrome *::before, .site-chrome *::after { box-sizing: border-box; }
+.site-chrome a { color: inherit; text-decoration: none; }
+.site-chrome a:hover, .site-chrome [aria-current="page"] { color: var(--site-accent); }
+.site-chrome a:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 4px; }
+.site-chrome-inner {
+  width: 100%; max-width: var(--site-max); margin-inline: auto; padding-inline: var(--site-gutter);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap;
+}
+.site-chrome-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--site-line); }
+.site-chrome-header .site-chrome-inner { min-height: 68px; padding-block: 12px; }
+.site-chrome-logo { display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.site-chrome-logo img { display: block; width: 119px; height: auto; }
+.site-chrome-dots { display: inline-flex; gap: 4px; }
+.site-chrome-dots::before, .site-chrome-dots::after {
+  content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--site-accent);
+}
+.site-chrome-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px; margin: 0; padding: 0; }
+.site-chrome-links .site-chrome-install { display: inline-block; background: var(--site-ink); color: var(--site-bg); padding: 8px 12px; font-weight: 650; }
+.site-chrome-links .site-chrome-install:hover { background: var(--site-accent); }
+.site-chrome-footer { border-top: 1px solid var(--site-line); }
+.site-chrome-footer .site-chrome-inner { padding-block: 24px; }
+.site-chrome-footer .site-chrome-links { color: var(--site-muted); }
+body.site-home main .inner { width: 100%; max-width: var(--site-max); padding-inline: var(--site-gutter); }
+body.site-store main.wrap, body.site-journey main.shell { max-width: var(--site-max); padding-inline: var(--site-gutter); }
+body.site-doc .page > .shell { width: 100%; max-width: var(--site-max); padding-inline: var(--site-gutter); }
+body.site-journey #detail { z-index: 40; }
+html { scroll-padding-top: 112px; }
+@media (max-width: 540px) {
+  .site-chrome-header .site-chrome-inner { gap: 8px 14px; }
+  .site-chrome-links { gap: 8px 12px; }
+  .site-chrome-logo img { width: 102px; }
+}

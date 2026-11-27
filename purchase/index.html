@@ -10,17 +10,23 @@
   <link rel="stylesheet" href="./purchase-v6.css">
   <script src="../language.js" defer></script>
   <script src="./checkout.js" defer></script>
+<link rel="stylesheet" href="/assets/site-shell.css">
 </head>
-<body>
-  <header class="top">
-    <a class="logo" href="/"><span class="dots" aria-hidden="true"><span></span><span></span></span>colooon</a>
-    <nav class="nav" aria-label="Primary">
-      <a class="desktop-link" href="/zh/journey/">Journey</a>
-      <a class="desktop-link" href="#purchase" aria-current="page">Trial &amp; Purchase</a>
-      <a href="/zh/purchase/" lang="zh-CN" hreflang="zh-CN" data-language-choice="zh">中文</a>
-      <a class="chrome" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
+<body class="site-store">
+  <!-- site-header -->
+<header class="site-chrome site-chrome-header">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/" aria-label="colooon · Home"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/journey/">Journey</a>
+      <a href="/purchase/" aria-current="page">Trial &amp; Purchase</a>
+      <a href="/zh/purchase/" data-language-choice="zh" lang="zh-CN">中文</a>
+      <a class="site-chrome-install" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
     </nav>
-  </header>
+  </div>
+</header>
+<!-- /site-header -->
 
   <main class="wrap">
     <section class="hero" aria-labelledby="checkout-title">
@@ -129,10 +135,20 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <a class="logo" href="/"><span class="dots" aria-hidden="true"><span></span><span></span></span>colooon</a>
-    <span>THOUGHTS KEEP GROWING.</span>
-    <span>© COLOOON 2026</span>
-  </footer>
+
+<!-- site-footer -->
+<footer class="site-chrome site-chrome-footer">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/" aria-label="colooon · Home"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="Site services">
+      <a href="/terms/">Terms</a>
+      <a href="/refunds/">Refunds</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/recover/">Recover license</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</footer>
+<!-- /site-footer -->
 </body>
 </html>

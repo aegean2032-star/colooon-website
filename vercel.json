@@ -21,11 +21,21 @@
   "redirects": [
     {
       "source": "/journal",
-      "destination": "/zh/journey/",
+      "destination": "/journey/",
       "permanent": false
     },
     {
       "source": "/zh/journal",
+      "destination": "/zh/journey/",
+      "permanent": false
+    },
+    {
+      "source": "/journal/index.html",
+      "destination": "/journey/",
+      "permanent": false
+    },
+    {
+      "source": "/zh/journal/index.html",
       "destination": "/zh/journey/",
       "permanent": false
     }

@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>colooon — Keep sparks from AI conversations</title>
-  <meta name="description" content="A quiet way to keep the sparks of AI conversations. Color On the insights you want to keep." />
-  <link rel="alternate" hreflang="zh-CN" href="/zh/" />
-  <link rel="alternate" hreflang="en" href="/" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>colooon — Thoughts keep growing.</title>
+<meta content="Your companion notebook for AI conversations. Highlight, save, take notes, and edit." name="description"/>
+<link href="/zh/" hreflang="zh-CN" rel="alternate"/>
+<link href="/" hreflang="en" rel="alternate"/>
+<style>
     :root {
       --black: #050505;
       --ink: #10100f;
@@ -1722,313 +1723,424 @@
       .site-header .nav-links { flex-wrap: wrap; gap: 5px 12px; }
       .site-header .nav-links .purchase-link { display: inline-flex; }
     }
+    /* The Chinese homepage follows the V4 layout while reusing the product demos. */
+    .site-header .nav-links, footer, .hero-grid > div:first-child, .experience-intro,
+    .experience-card > div:last-child, .feature-copy, .final > .inner {
+      font-family: "Avenir Next", "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+    }
+    .site-header .nav-links, .footer-links {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: normal;
+    }
+    .site-header .nav-links .nav-cta, .hero-actions .button, .final .button {
+      font-weight: 650;
+      letter-spacing: .04em;
+      text-transform: none;
+    }
+    .hero-eyebrow, .experience-kicker, .experience-num, .feature-copy .section-kicker,
+    .final .section-kicker {
+      font: 11px/1.5 monospace;
+      letter-spacing: .15em;
+      color: #aaa8a1;
+    }
+    .site-header .nav-links .nav-cta { font-size: 12px !important; }
+    .hero {
+      min-height: 0;
+      padding: clamp(54px, 7vw, 100px) 0 64px;
+      text-align: center;
+    }
+    .hero-grid { grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 50px); }
+    .hero-eyebrow { margin-inline: auto; }
+    .hero h1 {
+      font-size: clamp(70px, 12vw, 174px);
+      line-height: .95;
+      letter-spacing: -.075em;
+      font-weight: 500;
+      text-transform: none;
+    }
+    .hero h1 span, .experience-intro em { color: var(--yellow); }
+    .hero-copy {
+      margin: 22px auto 24px;
+      font-size: 22px;
+      font-weight: 550;
+      line-height: 1.8;
+      letter-spacing: -.025em;
+    }
+    .hero-copy .break { font-size: 15px; font-weight: 400; letter-spacing: normal; color: #aaa8a1; }
+    .hero-actions { justify-content: center; }
+    .chat-stage {
+      width: min(920px, 100%);
+      min-height: 0;
+      margin-inline: auto;
+      padding-bottom: 34px;
+      text-align: left;
+    }
+    .chat-window { height: clamp(340px, 46vw, 455px); }
+    .chat-stage .moments-panel { right: 14px; bottom: 0; }
+
+    .experience-strip, .feature-section, .final {
+      background: var(--black);
+      color: var(--paper);
+      padding: clamp(48px, 6vw, 88px) 0;
+    }
+    .experience-strip { border-bottom: 1px solid rgba(245,244,239,.12); }
+    .experience-intro {
+      font-size: clamp(20px, 2.7vw, 36px);
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: -.025em;
+      margin: 22px 0 28px;
+    }
+    .experience-intro em { font-style: normal; }
+    .experience-grid {
+      gap: 16px;
+      min-height: 0;
+      background: transparent;
+      border: 0;
+    }
+    .experience-card, .experience-card:last-child {
+      min-height: 0;
+      color: var(--paper);
+      border: 1px solid rgba(245,244,239,.16);
+    }
+    .experience-card::before { content: none; }
+    .experience-stage {
+      height: 250px;
+      margin: 18px 0 24px;
+      background: var(--paper);
+      color: var(--black);
+    }
+    .experience-title {
+      font-size: 22px;
+      font-weight: 550;
+      line-height: 1.8;
+      letter-spacing: -.025em;
+    }
+    .experience-copy, .feature-copy .section-copy {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.8;
+      letter-spacing: normal;
+      color: #aaa8a1;
+    }
+    .feature-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+      gap: clamp(24px, 5vw, 66px);
+      align-items: center;
+    }
+    .feature-copy .clean-title, .final h2 {
+      font-size: clamp(30px, 4vw, 58px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+    .feature-copy .section-kicker, .final .section-kicker { margin: 0 0 20px; }
+    .feature-layout .immersive-read-wrap, .feature-layout .export-page-wrap { margin-top: 0; }
+    .feature-layout .read-demo {
+      grid-template-columns: minmax(125px, 28%) minmax(0, 1fr);
+      min-height: 0;
+    }
+    .feature-layout .read-logo { padding-inline: 10px; }
+    .feature-layout .read-logo .logo-mark { min-width: 0; }
+    .feature-layout .read-toolbar { flex-wrap: wrap; gap: 6px; height: auto; min-height: 72px; padding-block: 12px; }
+    .feature-layout .qa-card { overflow-wrap: anywhere; }
+
+    .final { min-height: 0; }
+    .final p { font-size: 15px; line-height: 1.8; letter-spacing: normal; color: #aaa8a1; }
+    .final .button { background: var(--paper); color: var(--black); border-color: var(--paper); }
+
+    @media (max-width: 980px) {
+      .feature-layout { grid-template-columns: minmax(0, 1fr); }
+      .feature-layout .read-demo { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .chat-stage .moments-panel { right: 0; }
+      .chat-window { height: 370px; }
+      .experience-card { padding: 18px; }
+    }
   </style>
-  <script src="/language.js" defer></script>
+<script defer="" src="/language.js"></script>
+<link rel="stylesheet" href="/assets/site-shell.css">
 </head>
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="./index.html" aria-label="colooon home"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></a>
-      <div class="nav-links">
-        <a class="journal-link" href="/zh/journey/">Journey</a>
-        <a class="journal-link purchase-link" href="/purchase/">Trial & Purchase</a>
-        <a class="lang-switch" href="/zh/" data-language-choice="zh">中文</a>
-        <a class="button nav-cta" href="#install">Add to Chrome</a>
-      </div>
+<body class="site-home">
+<!-- site-header -->
+<header class="site-chrome site-chrome-header">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/" aria-label="colooon · Home"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="Primary navigation">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/journey/">Journey</a>
+      <a href="/purchase/">Trial &amp; Purchase</a>
+      <a href="/zh/" data-language-choice="zh" lang="zh-CN">中文</a>
+      <a class="site-chrome-install" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
     </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="inner hero-grid">
-        <div>
-          <p class="hero-eyebrow">A quiet way to keep the sparks of AI conversations.</p>
-          <h1>Colooon it.</h1>
-          <p class="hero-copy">
-            Color On
-            <span class="break">the insights you want to keep.</span>
+  </div>
+</header>
+<!-- /site-header -->
+<main>
+<section class="hero">
+<div class="inner hero-grid">
+<div>
+<p class="hero-eyebrow">Your companion notebook for AI conversations</p>
+<h1>Colooon it<span>.</span></h1>
+<p class="hero-copy">Highlight, save, take notes, and edit.<span class="break">Build your own library of AI inspiration.</span></p>
+<div class="hero-actions">
+<a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome ↗</a>
+<a class="button outline-button" href="#how">See how it works ↓</a>
+</div>
+</div>
+<div class="chat-stage" id="demo">
+<div class="chat-window">
+<div class="chat-top">
+<span class="traffic"></span><span class="traffic"></span><span class="traffic"></span>
+</div>
+<div class="chat-body">
+<div class="message">
+<div class="muted-line"></div>
+<div class="muted-line" style="width: 92%"></div>
+<p>Consciousness is the space in which the world appears.<span class="selected">Humans have experience. Large language models have expression, but no experience.</span>
+</p>
+</div>
+<div class="message">
+<div class="muted-line" style="width: 70%"></div>
+<div class="muted-line" style="width: 85%"></div>
+</div>
+</div>
+<div aria-label="Color On popover" class="color-pop">
+<span>Color On</span>
+<em>Note</em>
+</div>
+</div>
+<aside aria-label="Colored Moments panel" class="moments-panel">
+<div class="panel-head">
+<div>Colored Moments</div>
+<div>MD</div>
+<div>×</div>
+</div>
+<div class="search-line">Search question / colored / note</div>
+<div class="moment-card q-card">
+<div class="moment-tag">Q</div>
+<div class="moment-text">What is consciousness?</div>
+</div>
+<div class="moment-card a-card">
+<div class="moment-tag">A</div>
+<div class="moment-text">Humans have experience. Large language models have expression, but no experience.</div>
+</div>
+<div class="panel-foot">
+<div>Select Export</div>
+<div>Full MD</div>
+</div>
+</aside>
+<div aria-hidden="true" class="demo-cursor"></div>
+<div aria-hidden="true" class="jump-back-feedback">Back to the Scene</div>
+</div>
+</div>
+</section>
+<section class="experience-strip" id="how">
+<div class="inner">
+<div class="experience-kicker">01 / COLOR ON · BACK · TO CHAT</div>
+<h2 class="experience-intro">Some thoughts <em>are worth keeping.</em></h2>
+<div aria-label="colooon Alpha 1 core loop" class="experience-grid">
+<article class="experience-card">
+<div class="experience-num">01 / COLOR ON</div>
+<div class="experience-stage">
+<div aria-label="Color On demo" class="mini-browser">
+<div class="mini-browser-top"><span></span><span></span><span></span></div>
+<div class="mini-chat-lines">
+<div class="ghost-line long"></div>
+<div class="ghost-line short"></div>
+<p>
+                    Consciousness is the space in which the world appears.
+                    <span class="live-highlight">Humans have experience.</span>
+</p>
+</div>
+<div class="mini-color-pop"><b>Color On</b><span>Note</span></div>
+</div>
+</div>
+<div>
+<h3 class="experience-title">Color what you want to keep.</h3>
+<p class="experience-copy">Select text in an AI conversation. Coloring it saves the excerpt.</p>
+</div>
+</article>
+<article class="experience-card">
+<div class="experience-num">02 / BACK</div>
+<div class="experience-stage">
+<div aria-label="BACK demo" class="back-stage">
+<div class="saved-moment-mini">
+<div class="mini-head">Colored Moment</div>
+<div class="mini-saved-body">
+<div class="mini-tag">A</div>
+<div class="mini-card-line"></div>
+<div class="mini-card-line"></div>
+<div class="back-button-demo">BACK</div>
+</div>
+</div>
+<div class="back-travel-dot"></div>
+<div class="scene-mini">
+<div class="scene-line"></div>
+<div class="scene-line hit"></div>
+<div class="scene-line" style="width:64%"></div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="experience-title">Return to where it came from.</h3>
+<p class="experience-copy">Revisit the original conversation and recover the context around the excerpt.</p>
+</div>
+</article>
+<article class="experience-card">
+<div class="experience-num">03 / TO CHAT</div>
+<div class="experience-stage">
+<div aria-label="TO CHAT demo" class="tochat-stage">
+<div class="tochat-saved">
+<div class="tochat-saved-label">Saved moment</div>
+<p>Another thought hides inside a single sentence.</p>
+</div>
+<div class="tochat-button-demo">TO CHAT</div>
+<div class="chat-input-mini">
+<span class="typed-mini">Another thought hides inside a single sentence…</span>
+</div>
+<div class="send-dot">↑</div>
+</div>
+</div>
+<div>
+<h3 class="experience-title">Pick up where you left off.</h3>
+<p class="experience-copy">Bring a saved excerpt back into the conversation, and turn one idea into the starting point for another question.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section dark-section feature-section" id="read">
+<div class="inner feature-layout">
+<div class="feature-copy">
+<div>
+<div class="section-kicker">02 / COLORED MOMENTS</div>
+<h2 class="section-title clean-title">Everything you wanted to keep, in one place.</h2>
+</div>
+<p class="section-copy">Keep your excerpts together. Search, organize, add notes, read again, or return to the original conversation. Questions, answers, and notes stay connected.</p>
+</div>
+<div class="read-demo">
+<aside class="read-side">
+<div aria-label="colooon" class="read-logo"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></div>
+<div class="read-side-title"><span>Colored Moments</span><span>11</span></div>
+<div class="read-list">
+<div class="read-item active">Saving Meaningful Moments</div>
+<div class="read-item">What is consciousness?</div>
+<div class="read-item">Humans and large language models</div>
+<div class="read-item">Dialogue and Presence</div>
+<div class="read-item">Why are there so many dialogues in religions?</div>
+</div>
+</aside>
+<div class="read-main">
+<div class="read-toolbar">
+<div class="read-title">
+<strong>Saving Meaningful Moments</strong>
+<span>5Q · 8A · 0N · 0QA</span>
+</div>
+<div class="filters">
+<div class="filter">Q</div>
+<div class="filter">A</div>
+<div class="filter">N</div>
+<div class="filter light">QA</div>
+<div class="filter light">READ</div>
+</div>
+</div>
+<article class="qa-card">
+<span class="qmark">Q</span>
+<p><strong>What is consciousness?</strong></p>
+<p>Consciousness is the inner field in which things appear: thoughts, colors, pain, memories, desires, fears, time, and self.</p>
+<div class="qa-actions">
+<div class="qa-action is-back">BACK</div>
+<div class="qa-action">TO CHAT</div>
+<div class="qa-action">EXPORT</div>
+</div>
+<div aria-hidden="true" class="read-back-preview">
+<span class="label">Original conversation</span>
+<div class="line w1"></div>
+<div class="line w2"></div>
+<div class="line w3"></div>
+</div>
+</article>
+<article class="qa-card">
+<span class="qmark">A</span>
+<p>Consciousness is the space in which the world appears.</p>
+</article>
+<article class="qa-card">
+<span class="qmark">A</span>
+<p>Humans have experience. Large language models have expression, but no experience.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section dark-section feature-section" id="read-immersive">
+<div class="inner feature-layout">
+<div class="feature-copy">
+<div>
+<div class="section-kicker">03 / READ</div>
+<h2 class="section-title clean-title dark-clean-title">Immersive reading.</h2>
+</div>
+<p class="section-copy">Step away from the chat interface and revisit what you saved in a quieter, more immersive reading space.</p>
+</div>
+<div class="immersive-read-wrap">
+<img alt="Immersive reading view showing saved moments in a quiet reading layout" src="/read-immersive.png"/>
+</div>
+</div>
+</section>
+<section class="section dark-section feature-section" id="export">
+<div class="inner feature-layout">
+<div class="feature-copy">
+<div>
+<div class="section-kicker">04 / EXPORT</div>
+<h2 class="section-title clean-title dark-clean-title">Take what you’ve saved with you.</h2>
+</div>
+<p class="section-copy">
+            Export as Markdown, PDF, or an image to use in your workflow or share with others.
           </p>
-          <div class="hero-actions">
-            <a class="button" href="#install">Add to Chrome</a>
-            <a class="button outline-button" href="#demo">See how it works</a>
-          </div>
-        </div>
+</div>
+<div class="export-page-wrap">
+<img alt="Export view showing MD, PDF, and image export options" src="/export-page.png"/>
+</div>
+</div>
+</section>
+<section class="section dark-section orbit-section" style="padding-top: 0;">
+<div class="inner">
+<div aria-label="Atmospheric floating colored moments" class="orbit">
+<div class="bubble">What is consciousness</div>
+<div class="bubble">Does God exist</div>
+<div class="bubble">How do you love someone</div>
+<div class="bubble">Where did the universe go</div>
+<div class="bubble">Why do people die</div>
+<div aria-label="colooon" class="orbit-logo"><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></div>
+</div>
+</div>
+</section>
+<section class="final" id="install">
+<div class="inner">
+<div class="section-kicker">THOUGHTS KEEP GROWING.</div>
+<h2>Let your thoughts keep growing</h2>
+<p>Start with a moment you saved and see where your thoughts go.</p>
+<a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome ↗</a>
+</div>
+</section>
+</main>
 
-        <div class="chat-stage" id="demo">
-          <div class="chat-window">
-            <div class="chat-top">
-              <span class="traffic"></span><span class="traffic"></span><span class="traffic"></span>
-            </div>
-            <div class="chat-body">
-              <div class="message">
-                <div class="muted-line"></div>
-                <div class="muted-line" style="width: 92%"></div>
-                <p>
-                  Sometimes AI says something that opens a door.
-                  <span class="selected">A sentence you want to keep before the conversation moves on.</span>
-                </p>
-              </div>
-              <div class="message">
-                <div class="muted-line" style="width: 70%"></div>
-                <div class="muted-line" style="width: 85%"></div>
-              </div>
-            </div>
-
-            <div class="color-pop" aria-label="Color On popover">
-              <span>Color On</span>
-              <em>Note</em>
-            </div>
-          </div>
-
-          <aside class="moments-panel" aria-label="Colored Moments panel">
-            <div class="panel-head">
-              <div>Colored Moments</div>
-              <div>MD</div>
-              <div>×</div>
-            </div>
-            <div class="search-line">Search question / colored / note</div>
-            <div class="moment-card q-card">
-              <div class="moment-tag">Q</div>
-              <div class="moment-text">What is consciousness?</div>
-            </div>
-            <div class="moment-card a-card">
-              <div class="moment-tag">A</div>
-              <div class="moment-text">Humans have experience. Large Language Models have expression without experience.</div>
-            </div>
-            <div class="panel-foot">
-              <div>Select Export</div>
-              <div>Full MD</div>
-            </div>
-          </aside>
-
-          <div class="demo-cursor" aria-hidden="true"></div>
-          <div class="jump-back-feedback" aria-hidden="true">Back to the Scene</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience-strip" id="how">
-      <div class="inner">
-        <div class="experience-grid" aria-label="colooon Alpha 1 core loop">
-          <article class="experience-card">
-            <div class="experience-num">01</div>
-            <div class="experience-stage">
-              <div class="mini-browser" aria-label="Color On demo">
-                <div class="mini-browser-top"><span></span><span></span><span></span></div>
-                <div class="mini-chat-lines">
-                  <div class="ghost-line long"></div>
-                  <div class="ghost-line short"></div>
-                  <p>
-                    A line stands out inside the conversation.
-                    <span class="live-highlight">Color On the insight you want to keep.</span>
-                  </p>
-                </div>
-                <div class="mini-color-pop"><b>Color On</b><span>Note</span></div>
-              </div>
-            </div>
-            <div>
-              <h3 class="experience-title">Color On</h3>
-              <p class="experience-copy">The insights you want to keep.</p>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <div class="experience-num">02</div>
-            <div class="experience-stage">
-              <div class="back-stage" aria-label="BACK demo">
-                <div class="saved-moment-mini">
-                  <div class="mini-head">Colored Moment</div>
-                  <div class="mini-saved-body">
-                    <div class="mini-tag">A</div>
-                    <div class="mini-card-line"></div>
-                    <div class="mini-card-line"></div>
-                    <div class="back-button-demo">BACK</div>
-                  </div>
-                </div>
-                <div class="back-travel-dot"></div>
-                <div class="scene-mini">
-                  <div class="scene-line"></div>
-                  <div class="scene-line hit"></div>
-                  <div class="scene-line" style="width:64%"></div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="experience-title">Back</h3>
-              <p class="experience-copy">Jump to the source conversation.</p>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <div class="experience-num">03</div>
-            <div class="experience-stage">
-              <div class="tochat-stage" aria-label="TO CHAT demo">
-                <div class="tochat-saved">
-                  <div class="tochat-saved-label">Saved moment</div>
-                  <p>A sentence that still has another thought inside it.</p>
-                </div>
-                <div class="tochat-button-demo">TO CHAT</div>
-                <div class="chat-input-mini">
-                  <span class="typed-mini">A sentence that still has another thought...</span>
-                </div>
-                <div class="send-dot">↑</div>
-              </div>
-            </div>
-            <div>
-              <h3 class="experience-title">To Chat</h3>
-              <p class="experience-copy">Bring a colored moment back into chat.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section paper-section" id="read" style="padding-top: 0;">
-      <div class="inner">
-        <div class="split" style="margin-bottom: 54px;">
-          <div>
-            <div class="section-kicker">READ</div>
-            <h2 class="section-title clean-title">Everything you colored lives here.</h2>
-          </div>
-          <p class="section-copy">
-            Read, jump back, continue in chat,
-            or export — all in one place.
-          </p>
-        </div>
-
-        <div class="read-demo">
-          <aside class="read-side">
-            <div class="read-logo" aria-label="colooon"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
-            <div class="read-side-title"><span>Colored Moments</span><span>11</span></div>
-            <div class="read-list">
-              <div class="read-item active">Saving Meaningful Moments</div>
-              <div class="read-item">What is consciousness?</div>
-              <div class="read-item">Humans and Large Language Models</div>
-              <div class="read-item">Dialogue and Presence</div>
-              <div class="read-item">Why are there so many dialogues in religions?</div>
-            </div>
-          </aside>
-
-          <div class="read-main">
-            <div class="read-toolbar">
-              <div class="read-title">
-                <strong>Saving Meaningful Moments</strong>
-                <span>5Q · 8A · 0N · 0QA</span>
-              </div>
-              <div class="filters">
-                <div class="filter">Q</div>
-                <div class="filter">A</div>
-                <div class="filter">N</div>
-                <div class="filter light">QA</div>
-                <div class="filter light">READ</div>
-              </div>
-            </div>
-
-            <article class="qa-card">
-              <span class="qmark">Q</span>
-              <p><strong>What is consciousness?</strong></p>
-              <p>It is the inner field where things show up: thoughts, colors, pain, memory, desire, fear, time, self.</p>
-              <div class="qa-actions">
-                <div class="qa-action is-back">BACK</div>
-                <div class="qa-action">TO CHAT</div>
-                <div class="qa-action">EXPORT</div>
-              </div>
-              <div class="read-back-preview" aria-hidden="true">
-                <span class="label">SOURCE CONVERSATION</span>
-                <div class="line w1"></div>
-                <div class="line w2"></div>
-                <div class="line w3"></div>
-              </div>
-            </article>
-
-            <article class="qa-card">
-              <span class="qmark">A</span>
-              <p>Consciousness is the space in which the world becomes present.</p>
-            </article>
-
-            <article class="qa-card">
-              <span class="qmark">A</span>
-              <p>Humans have experience. Large Language Models have expression without experience.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark-section" id="read-immersive">
-      <div class="inner">
-        <div class="split">
-          <div>
-            <div class="section-kicker">READ</div>
-            <h2 class="section-title clean-title dark-clean-title">Immersive Reading.</h2>
-          </div>
-          <p class="section-copy">
-            A quieter, more immersive way to revisit the insights you’ve kept.
-          </p>
-        </div>
-
-        <div class="immersive-read-wrap">
-          <img src="./read-immersive.png" alt="Immersive reading view showing saved moments in a quiet reading layout">
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark-section" id="export">
-      <div class="inner">
-        <div class="split">
-          <div>
-            <div class="section-kicker">EXPORT</div>
-            <h2 class="section-title clean-title dark-clean-title">Export when needed.</h2>
-          </div>
-          <p class="section-copy">
-            Export as MD, PDF,<br>
-            or IMAGE.
-          </p>
-        </div>
-
-        <div class="export-page-wrap">
-          <img src="./export-page.png" alt="Export view showing MD, PDF, and image export options">
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark-section orbit-section" style="padding-top: 0;">
-      <div class="inner">
-        <div class="orbit" aria-label="Atmospheric floating colored moments">
-          <div class="bubble">What is consciousness</div>
-          <div class="bubble">Does God exist</div>
-          <div class="bubble">How do you love someone</div>
-          <div class="bubble">Where did the universe go</div>
-          <div class="bubble">Why do people die</div>
-          <div class="orbit-logo" aria-label="colooon"><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="final" id="install">
-      <div class="inner">
-        <h2>The conversation ends. The thought doesn’t have to.</h2>
-        <p>Save a moment. Return to the scene. Keep thinking.</p>
-        <a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Add to Chrome</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="foot">
-      <div class="footer-brand" aria-label="colooon"><span class="logo-dots" aria-hidden="true"><span></span><span></span></span><img class="logo-mark" src="./colooon-wordmark.svg" alt="colooon"></div>
-      <span>Keep the sparks from AI conversations. Come back to them anytime.</span>
-      <div class="footer-links">
-        <a href="/terms/">Terms of Service</a>
-        <a href="/refunds/">Refund Policy</a>
-        <a href="/purchase/">Trial & Purchase</a>
-        <a href="/zh/journey/">Journey</a>
-        <a href="./privacy/index.html">Privacy</a>
-        <a href="./support/index.html">Support</a>
-        <a href="mailto:support@colooon.com">support@colooon.com</a>
-        <a href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Chrome Web Store</a>
-      </div>
-    </div>
-  </footer>
+<!-- site-footer -->
+<footer class="site-chrome site-chrome-footer">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/" aria-label="colooon · Home"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="Site services">
+      <a href="/terms/">Terms</a>
+      <a href="/refunds/">Refunds</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/recover/">Recover license</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</footer>
+<!-- /site-footer -->
 </body>
 </html>

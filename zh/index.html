@@ -1862,19 +1862,23 @@
     }
   </style>
 <script defer="" src="../language.js"></script>
+<link rel="stylesheet" href="/assets/site-shell.css">
 </head>
-<body>
-<header class="site-header">
-<nav class="nav">
-<a aria-label="colooon home" class="logo" href="/zh/"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="../colooon-wordmark.svg"/></a>
-<div class="nav-links">
-<a class="journal-link" href="./journey/index.html">Journey</a>
-<a class="journal-link purchase-link" href="/zh/purchase/">试用与购买</a>
-        <a class="lang-switch" data-language-choice="en" href="/">EN</a>
-<a class="button nav-cta" href="#install">添加到 Chrome ↗</a>
-</div>
-</nav>
+<body class="site-home">
+<!-- site-header -->
+<header class="site-chrome site-chrome-header">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/zh/" aria-label="colooon · 首页"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="主导航">
+      <a href="/zh/" aria-current="page">首页</a>
+      <a href="/zh/journey/">Journey</a>
+      <a href="/zh/purchase/">试用与购买</a>
+      <a href="/" data-language-choice="en" lang="en">EN</a>
+      <a class="site-chrome-install" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">添加到 Chrome</a>
+    </nav>
+  </div>
 </header>
+<!-- /site-header -->
 <main>
 <section class="hero">
 <div class="inner hero-grid">
@@ -1883,8 +1887,8 @@
 <h1>Colooon it<span>.</span></h1>
 <p class="hero-copy">高亮、收藏、笔记、编辑。<span class="break">构建自己的 AI 灵感库。</span></p>
 <div class="hero-actions">
-<a class="button" href="#install">添加到 Chrome ↗</a>
-<a class="button outline-button" href="#demo">查看使用方式 ↓</a>
+<a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">添加到 Chrome ↗</a>
+<a class="button outline-button" href="#how">查看使用方式 ↓</a>
 </div>
 </div>
 <div class="chat-stage" id="demo">
@@ -2123,21 +2127,20 @@
 </div>
 </section>
 </main>
-<footer>
-<div class="foot">
-<div aria-label="colooon" class="footer-brand"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="../colooon-wordmark.svg"/></div>
-<span>你的 AI 对话随行笔记本</span>
-<div class="footer-links">
-        <a href="/zh/terms/">服务条款</a>
-<a href="/zh/refunds/">退款政策</a>
-<a href="/zh/purchase/">试用与购买</a>
-<a href="./journey/index.html">Journey</a>
-<a href="./privacy/index.html">隐私政策</a>
-<a href="./support/index.html">支持</a>
-<a href="mailto:support@colooon.com">联系我们</a>
-<a href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Chrome 网上应用店</a>
-</div>
-</div>
+
+<!-- site-footer -->
+<footer class="site-chrome site-chrome-footer">
+  <div class="site-chrome-inner">
+    <a class="site-chrome-logo" href="/zh/" aria-label="colooon · 首页"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <nav class="site-chrome-links" aria-label="网站服务">
+      <a href="/zh/terms/">服务条款</a>
+      <a href="/zh/refunds/">退款政策</a>
+      <a href="/zh/privacy/">隐私政策</a>
+      <a href="/zh/recover/">找回许可证</a>
+      <a href="/zh/support/">支持</a>
+    </nav>
+  </div>
 </footer>
+<!-- /site-footer -->
 </body>
 </html>
