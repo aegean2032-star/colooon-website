@@ -14,7 +14,7 @@ def chrome(zh,route):
     label='首页' if zh else 'Home'
     buy='试用与购买' if zh else 'Trial &amp; Purchase'
     install='添加到 Chrome' if zh else 'Add to Chrome'
-    home_link=f'<a class="site-chrome-logo notranslate" translate="no" href="{home}" aria-label="colooon · {label}"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>'
+    home_link=f'<a class="site-chrome-logo notranslate" translate="no" href="{home}" aria-label="colooon · {label}"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="126"></a>'
     def link(url,title,r):
         return f'<a href="{url}"'+(' aria-current="page"' if route==r else '')+f'>{title}</a>'
     language='en' if zh else 'zh'

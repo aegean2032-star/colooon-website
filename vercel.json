@@ -16,6 +16,10 @@
     {
       "source": "/api/recovery/redeem",
       "destination": "https://colooon-license.colooon.workers.dev/api/recovery/redeem"
+    },
+    {
+      "source": "/api/support/submit",
+      "destination": "https://colooon-license-preview.colooon.workers.dev/api/support/submit"
     }
   ],
   "redirects": [

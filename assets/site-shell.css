@@ -21,11 +21,11 @@ body { margin: 0; font-family: var(--site-font); }
 }
 .site-chrome-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--site-line); }
 .site-chrome-header .site-chrome-inner { min-height: 68px; padding-block: 12px; }
-.site-chrome-logo { display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0; }
-.site-chrome-logo img { display: block; width: 119px; height: auto; }
-.site-chrome-dots { display: inline-flex; gap: 4px; }
+.site-chrome-logo { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.site-chrome-logo img { display: block; width: 126px; height: auto; }
+.site-chrome-dots { display: inline-flex; gap: 8px; }
 .site-chrome-dots::before, .site-chrome-dots::after {
-  content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--site-accent);
+  content: ""; width: 13px; height: 13px; border-radius: 50%; background: var(--site-accent);
 }
 .site-chrome-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px; margin: 0; padding: 0; }
 .site-chrome-links .site-chrome-install { display: inline-block; background: var(--site-ink); color: var(--site-bg); padding: 8px 12px; font-weight: 650; }
@@ -41,7 +41,10 @@ html { scroll-padding-top: 112px; }
 @media (max-width: 540px) {
   .site-chrome-header .site-chrome-inner { gap: 8px 14px; }
   .site-chrome-links { gap: 8px 12px; }
-  .site-chrome-logo img { width: 102px; }
+
+}
+@media (max-width: 500px) {
+  .site-chrome-header .site-chrome-logo img { width: 100px; }
 }
 
 .site-chrome-logo img { filter: brightness(0) invert(1); }

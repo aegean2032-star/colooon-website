@@ -72,18 +72,18 @@ const supportPages = [
 <p>这些只是一些参考方向。</p><p>一句话、一张截图、一小段录屏，或者一封长长的邮件，都可以。</p></section>
 <section><h2>02. 如何提交反馈？</h2><p>如果你遇到了具体的问题，可以附上相关的截图、录屏、产品版本或操作过程，这会帮助我们更快地找到问题。</p><p>如果只是想分享一个感受，直接写下来就好。</p>
 <button class="copy-template" type="button" onclick="document.getElementById('feedbackForm').hidden=false;this.hidden=true;document.getElementById('fbMessage').focus()">SEND FEEDBACK ↗</button>
-<form id="feedbackForm" hidden onsubmit="event.preventDefault();submitOnlineFeedback()"><div class="feedback-form">
+<form id="feedbackForm" hidden onsubmit="event.preventDefault();submitSupportForm('feedback', this)"><div class="feedback-form">
 <div><label for="fbType">FEEDBACK TYPE / 反馈方向（选填）</label><select id="fbType"><option value="">请选择（可选）</option><option>使用感受</option><option>功能建议</option><option>使用问题</option><option>使用方式</option><option>其他想法</option></select></div>
 <div><label for="fbEmail">EMAIL / 邮箱（选填）</label><input id="fbEmail" type="email" placeholder="用于后续联系"></div>
 <div class="wide"><label for="fbMessage">FEEDBACK / 反馈内容</label><textarea id="fbMessage" placeholder="想和我们分享的内容……"></textarea></div>
-<div class="wide"><label for="fbFiles">ATTACHMENTS / 附件（选填）</label><input id="fbFiles" type="file" accept="image/*,video/*,.pdf,.txt" multiple></div>
+<div class="wide"><label for="fbFiles">ATTACHMENTS / 附件（选填）</label><input id="fbFiles" type="file" accept=".png,.jpg,.jpeg,.gif,.webp,.pdf,.mp4,.webm,.txt" multiple></div>
 <div class="wide"><label for="fbVersion">ENVIRONMENT / 使用环境（选填）</label><input id="fbVersion" placeholder="浏览器 / 操作系统 / colooon 版本"></div>
-<div class="wide"><button type="submit">PREPARE FEEDBACK EMAIL ↗</button><p class="form-status" id="feedbackStatus" role="status">此表单会准备邮件草稿。请在邮件应用中确认并发送。</p></div></div></form></section>
+<div class="wide"><button type="submit">SEND FEEDBACK</button><p class="form-status" id="feedbackStatus" role="status">支持 PNG、JPEG、GIF、WebP、PDF、MP4、WebM 和 TXT，最多 3 个文件，每个不超过 3 MB。</p></div></div></form></section>
 <section><h2>03. 反馈之后会发生什么？</h2><p>我们会认真阅读收到的反馈，并将其中的问题与建议纳入后续的产品迭代。</p><p>如果需要进一步了解你的使用场景，我们可能会通过邮件与你联系。</p><p>你也可以通过 Journey 中的 <button class="feedback-updates" type="button" onclick="closeDetail();document.querySelector('[data-tab=updates]').click()">Updates</button> 栏目，了解 colooon 最近发生的变化。</p><p>并不是所有建议都会立即实现，但每一份反馈都能帮助我们更好地理解 colooon 在真实使用中的样子。</p></section>
 <div class="feedback-signoff"><p>谢谢你在 colooon 还很年轻的时候使用它。</p><p>也谢谢你愿意花一点时间，告诉我们你的感受。</p><p><strong>Thoughts keep growing.</strong></p><p>colooon</p></div></div>`,
     template:""
   },
-  {"label": "04 / colooon STORIES", "title": "分享你的 colooon 故事，赢取免费许可证", "sub": "Share your colooon story and earn a free license.", "body": "<div class=\"story-campaign\"><p><strong>那些不想遗忘的思想，值得被留下。</strong></p><p>你是否曾在与 AI 的对话中突然获得一个令人兴奋的想法？是否曾通过一次对话，理解了一个困扰自己很久的问题？又或者，当你想重新寻找那段启发过你的文字时，却发现它早已淹没在漫长的对话中？</p><p>colooon 正是从这样的体验中诞生的。</p><p>无论你是设计师、创作者、开发者、研究者、学生，还是习惯与 AI 一起思考的人，我们都期待看到 colooon 在你的日常生活中扮演着怎样的角色。</p><p>分享你的使用故事，让更多人发现与 AI 一起思考、学习和创作的可能性。</p><section><h2>活动详情</h2><p><strong>colooon Stories</strong> · 长期开放</p><p>在内容或视频平台上发布一篇以「为什么我使用 colooon」或「我如何使用 colooon」为主题的文章或视频，分享你在 AI 对话、灵感收集、知识整理或创作过程中遇到的问题，以及 colooon 为你带来的改变。</p><p><strong>优秀作品将有机会获得 colooon Pro 永久许可证或专属购买优惠。</strong></p></section><section><h2>01 / 选择内容形式与发布平台</h2><div class=\"story-table\"><table><thead><tr><th>内容形式</th><th>发布平台</th><th>建议</th></tr></thead><tbody><tr><td>文章</td><td>个人博客、Medium、Substack、微信公众号</td><td>800 字以上，包含至少 3 张实际使用截图</td></tr><tr><td>图文</td><td>小红书、Instagram 等</td><td>500 字以上，包含至少 3 张实际使用图片</td></tr><tr><td>视频</td><td>YouTube、Bilibili、小红书等</td><td>60 秒以上，包含实际使用过程</td></tr><tr><td>社交媒体内容</td><td>X、Threads、LinkedIn 等</td><td>图文或短视频，展示具体使用场景</td></tr></tbody></table></div><h3>投稿账号要求</h3><ul><li>使用日常活跃的真实社交账号。</li><li>具有原创内容发布记录。</li><li>投稿内容公开可访问。</li><li>不设最低粉丝数量要求。</li></ul></section><section><h2>02 / 创作你的内容</h2><p>以下是一些可供参考的分享方向。</p><div class=\"story-table\"><table><thead><tr><th>内容方向</th><th>内容参考</th></tr></thead><tbody><tr><td>AI 对话习惯</td><td>你通常与 AI 聊些什么？这些对话在你的生活、工作或创作中扮演着怎样的角色？</td></tr><tr><td>使用背景</td><td>在寻找、保存、整理或延续对话内容时，你遇到过哪些问题？</td></tr><tr><td>实际使用体验</td><td>colooon 如何融入你的日常工作流？哪些功能是你经常使用的？</td></tr><tr><td>图片与视频</td><td>展示实际使用界面、收藏内容、QAN 笔记、编辑过程或导出成果。</td></tr><tr><td>使用后的变化</td><td>使用 colooon 前后，你与 AI 对话、整理灵感或开展创作的方式发生了哪些变化？</td></tr><tr><td>独特的使用方法</td><td>分享你自己的工作流，例如设计研究、语言学习、创作记录、知识探索或长期思考。</td></tr></tbody></table></div><p>以上方向仅供参考，内容形式与语言不限。我们同样欢迎关于产品不足与改进空间的真实分享。</p></section><section><h2>03 / 发布与分享</h2><p>在你常用的内容平台上发布作品，并附上 colooon 官网地址：<a href=\"https://colooon.com\" target=\"_blank\" rel=\"noopener noreferrer\">colooon.com</a>，或者 @colooon。</p><p>如果你在博客或视频平台发布了完整内容，也可以在常用的社交媒体上分享作品链接。</p></section><section><h2>04 / 提交你的作品</h2><p>作品发布后，通过本页面的提交入口提供以下信息：</p><ul><li>姓名或昵称</li><li>联系邮箱</li><li>作品公开链接</li><li>社交媒体分享链接（如有）</li><li>其他补充信息（可选）</li></ul><button class=\"copy-template\" type=\"button\" onclick=\"document.getElementById('storyForm').hidden=false;this.hidden=true;document.getElementById('storyName').focus()\">Submit your story ↗</button><form id=\"storyForm\" hidden onsubmit=\"event.preventDefault();submitStory()\" ><div class=\"feedback-form\"><div><label for=\"storyName\">姓名或昵称</label><input id=\"storyName\" required></div><div><label for=\"storyEmail\">联系邮箱</label><input id=\"storyEmail\" type=\"email\" required></div><div class=\"wide\"><label for=\"storyUrl\">作品公开链接</label><input id=\"storyUrl\" type=\"url\" required></div><div class=\"wide\"><label for=\"storySocial\">社交媒体分享链接（如有）</label><input id=\"storySocial\" type=\"url\"></div><div class=\"wide\"><label for=\"storyNotes\">其他补充信息（可选）</label><textarea id=\"storyNotes\"></textarea></div><div class=\"wide\"><button type=\"submit\">PREPARE STORY EMAIL ↗</button><p class=\"form-status\" id=\"storyStatus\" role=\"status\">此表单会准备邮件草稿。请在邮件应用中确认并发送。</p></div></div></form></section><section><h2>05 / 作品审核</h2><p>colooon 团队将根据作品的真实性、内容质量、表达呈现及传播表现进行审核。</p><p><strong>预计审核时间为 1–3 个工作日。</strong></p><p>审核完成后，我们将通过电子邮件通知结果，并发送相应的奖励。</p></section><section><h2>奖励机制</h2><h3>内容质量</h3><div class=\"story-table\"><table><thead><tr><th>评估维度</th><th>权重</th></tr></thead><tbody><tr><td>使用体验的真实性</td><td>30%</td></tr><tr><td>内容的深度与启发性</td><td>30%</td></tr><tr><td>内容的表达与呈现</td><td>20%</td></tr><tr><td>社区互动与传播表现</td><td>20%</td></tr></tbody></table></div><h3>作品评价</h3><ul><li>★★★★★ 内容丰富、表达清晰，具有独特的使用场景与个人见解。</li><li>★★★★ 内容完整，能够清晰呈现实际使用体验。</li><li>★★★ 具有真实、具体的使用记录。</li></ul><h3>作品互动</h3><div class=\"story-table\"><table><thead><tr><th>评价</th><th>互动表现参考</th></tr></thead><tbody><tr><td>★★★★★</td><td>50 次及以上点赞</td></tr><tr><td>★★★★</td><td>30 次及以上点赞</td></tr><tr><td>★★★</td><td>20 次及以上点赞</td></tr></tbody></table></div><p>互动数据仅作为评估参考，不是获得奖励的必要条件。</p><h3>奖励内容</h3><div class=\"story-table\"><table><thead><tr><th>评价</th><th>奖励</th></tr></thead><tbody><tr><td>★★★★★</td><td>colooon Pro 永久许可证</td></tr><tr><td>★★★★</td><td>colooon Pro 三折购买优惠</td></tr><tr><td>★★★</td><td>colooon Pro 五折购买优惠</td></tr></tbody></table></div><p>即使你的作品没有获得大量点赞，只要它呈现了真实而独特的使用场景，也有机会获得最高奖励。</p></section><section><h2>活动说明</h2><ul><li>已购买 colooon Pro 的用户同样可以参与。</li><li>作品须为原创，并基于真实的产品使用体验。</li><li>作品需保持公开可访问。</li><li>如作品中包含私人 AI 对话，请隐藏不适合公开的内容。</li><li>活动不要求正面评价或使用统一的宣传文案。</li><li>如分享获得奖励，请按照发布平台的相关规则披露奖励关系。</li><li>投稿者保留作品的著作权。如我们希望在 colooon 官网或官方社交媒体展示你的作品，将另行征得你的同意。</li><li>每位参与者原则上可获得一次活动奖励。</li></ul><p>也许你的一段对话、一个想法、一种使用方式，会成为另一个人思考的起点。</p><p>感谢你的分享。</p><p><strong>colooon</strong></p><p>Thoughts keep growing.</p></section></div>", "template": ""},
+  {"label": "04 / colooon STORIES", "title": "分享你的 colooon 故事，赢取免费许可证", "sub": "Share your colooon story and earn a free license.", "body": "<div class=\"story-campaign\"><p><strong>那些不想遗忘的思想，值得被留下。</strong></p><p>你是否曾在与 AI 的对话中突然获得一个令人兴奋的想法？是否曾通过一次对话，理解了一个困扰自己很久的问题？又或者，当你想重新寻找那段启发过你的文字时，却发现它早已淹没在漫长的对话中？</p><p>colooon 正是从这样的体验中诞生的。</p><p>无论你是设计师、创作者、开发者、研究者、学生，还是习惯与 AI 一起思考的人，我们都期待看到 colooon 在你的日常生活中扮演着怎样的角色。</p><p>分享你的使用故事，让更多人发现与 AI 一起思考、学习和创作的可能性。</p><section><h2>活动详情</h2><p><strong>colooon Stories</strong> · 长期开放</p><p>在内容或视频平台上发布一篇以「为什么我使用 colooon」或「我如何使用 colooon」为主题的文章或视频，分享你在 AI 对话、灵感收集、知识整理或创作过程中遇到的问题，以及 colooon 为你带来的改变。</p><p><strong>优秀作品将有机会获得 colooon Pro 永久许可证或专属购买优惠。</strong></p></section><section><h2>01 / 选择内容形式与发布平台</h2><div class=\"story-table\"><table><thead><tr><th>内容形式</th><th>发布平台</th><th>建议</th></tr></thead><tbody><tr><td>文章</td><td>个人博客、Medium、Substack、微信公众号</td><td>800 字以上，包含至少 3 张实际使用截图</td></tr><tr><td>图文</td><td>小红书、Instagram 等</td><td>500 字以上，包含至少 3 张实际使用图片</td></tr><tr><td>视频</td><td>YouTube、Bilibili、小红书等</td><td>60 秒以上，包含实际使用过程</td></tr><tr><td>社交媒体内容</td><td>X、Threads、LinkedIn 等</td><td>图文或短视频，展示具体使用场景</td></tr></tbody></table></div><h3>投稿账号要求</h3><ul><li>使用日常活跃的真实社交账号。</li><li>具有原创内容发布记录。</li><li>投稿内容公开可访问。</li><li>不设最低粉丝数量要求。</li></ul></section><section><h2>02 / 创作你的内容</h2><p>以下是一些可供参考的分享方向。</p><div class=\"story-table\"><table><thead><tr><th>内容方向</th><th>内容参考</th></tr></thead><tbody><tr><td>AI 对话习惯</td><td>你通常与 AI 聊些什么？这些对话在你的生活、工作或创作中扮演着怎样的角色？</td></tr><tr><td>使用背景</td><td>在寻找、保存、整理或延续对话内容时，你遇到过哪些问题？</td></tr><tr><td>实际使用体验</td><td>colooon 如何融入你的日常工作流？哪些功能是你经常使用的？</td></tr><tr><td>图片与视频</td><td>展示实际使用界面、收藏内容、QAN 笔记、编辑过程或导出成果。</td></tr><tr><td>使用后的变化</td><td>使用 colooon 前后，你与 AI 对话、整理灵感或开展创作的方式发生了哪些变化？</td></tr><tr><td>独特的使用方法</td><td>分享你自己的工作流，例如设计研究、语言学习、创作记录、知识探索或长期思考。</td></tr></tbody></table></div><p>以上方向仅供参考，内容形式与语言不限。我们同样欢迎关于产品不足与改进空间的真实分享。</p></section><section><h2>03 / 发布与分享</h2><p>在你常用的内容平台上发布作品，并附上 colooon 官网地址：<a href=\"https://colooon.com\" target=\"_blank\" rel=\"noopener noreferrer\">colooon.com</a>，或者 @colooon。</p><p>如果你在博客或视频平台发布了完整内容，也可以在常用的社交媒体上分享作品链接。</p></section><section><h2>04 / 提交你的作品</h2><p>作品发布后，通过本页面的提交入口提供以下信息：</p><ul><li>姓名或昵称</li><li>联系邮箱</li><li>作品公开链接</li><li>社交媒体分享链接（如有）</li><li>其他补充信息（可选）</li></ul><button class=\"copy-template\" type=\"button\" onclick=\"document.getElementById('storyForm').hidden=false;this.hidden=true;document.getElementById('storyName').focus()\">Submit your story ↗</button><form id=\"storyForm\" hidden onsubmit=\"event.preventDefault();submitSupportForm('story', this)\" ><div class=\"feedback-form\"><div><label for=\"storyName\">姓名或昵称</label><input id=\"storyName\" required></div><div><label for=\"storyEmail\">联系邮箱</label><input id=\"storyEmail\" type=\"email\" required></div><div class=\"wide\"><label for=\"storyUrl\">作品公开链接</label><input id=\"storyUrl\" type=\"url\" required></div><div class=\"wide\"><label for=\"storySocial\">社交媒体分享链接（如有）</label><input id=\"storySocial\" type=\"url\"></div><div class=\"wide\"><label for=\"storyNotes\">其他补充信息（可选）</label><textarea id=\"storyNotes\"></textarea></div><div class=\"wide\"><label for=\"storyFiles\">附件（选填）</label><input id=\"storyFiles\" type=\"file\" accept=\".png,.jpg,.jpeg,.gif,.webp,.pdf,.mp4,.webm,.txt\" multiple></div><div class=\"wide\"><button type=\"submit\">SUBMIT YOUR STORY</button><p class=\"form-status\" id=\"storyStatus\" role=\"status\">支持 PNG、JPEG、GIF、WebP、PDF、MP4、WebM 和 TXT，最多 3 个文件，每个不超过 3 MB。</p></div></div></form></section><section><h2>05 / 作品审核</h2><p>colooon 团队将根据作品的真实性、内容质量、表达呈现及传播表现进行审核。</p><p><strong>预计审核时间为 1–3 个工作日。</strong></p><p>审核完成后，我们将通过电子邮件通知结果，并发送相应的奖励。</p></section><section><h2>奖励机制</h2><h3>内容质量</h3><div class=\"story-table\"><table><thead><tr><th>评估维度</th><th>权重</th></tr></thead><tbody><tr><td>使用体验的真实性</td><td>30%</td></tr><tr><td>内容的深度与启发性</td><td>30%</td></tr><tr><td>内容的表达与呈现</td><td>20%</td></tr><tr><td>社区互动与传播表现</td><td>20%</td></tr></tbody></table></div><h3>作品评价</h3><ul><li>★★★★★ 内容丰富、表达清晰，具有独特的使用场景与个人见解。</li><li>★★★★ 内容完整，能够清晰呈现实际使用体验。</li><li>★★★ 具有真实、具体的使用记录。</li></ul><h3>作品互动</h3><div class=\"story-table\"><table><thead><tr><th>评价</th><th>互动表现参考</th></tr></thead><tbody><tr><td>★★★★★</td><td>50 次及以上点赞</td></tr><tr><td>★★★★</td><td>30 次及以上点赞</td></tr><tr><td>★★★</td><td>20 次及以上点赞</td></tr></tbody></table></div><p>互动数据仅作为评估参考，不是获得奖励的必要条件。</p><h3>奖励内容</h3><div class=\"story-table\"><table><thead><tr><th>评价</th><th>奖励</th></tr></thead><tbody><tr><td>★★★★★</td><td>colooon Pro 永久许可证</td></tr><tr><td>★★★★</td><td>colooon Pro 三折购买优惠</td></tr><tr><td>★★★</td><td>colooon Pro 五折购买优惠</td></tr></tbody></table></div><p>即使你的作品没有获得大量点赞，只要它呈现了真实而独特的使用场景，也有机会获得最高奖励。</p></section><section><h2>活动说明</h2><ul><li>已购买 colooon Pro 的用户同样可以参与。</li><li>作品须为原创，并基于真实的产品使用体验。</li><li>作品需保持公开可访问。</li><li>如作品中包含私人 AI 对话，请隐藏不适合公开的内容。</li><li>活动不要求正面评价或使用统一的宣传文案。</li><li>如分享获得奖励，请按照发布平台的相关规则披露奖励关系。</li><li>投稿者保留作品的著作权。如我们希望在 colooon 官网或官方社交媒体展示你的作品，将另行征得你的同意。</li><li>每位参与者原则上可获得一次活动奖励。</li></ul><p>也许你的一段对话、一个想法、一种使用方式，会成为另一个人思考的起点。</p><p>感谢你的分享。</p><p><strong>colooon</strong></p><p>Thoughts keep growing.</p></section></div>", "template": ""},
   {
     label:"FAQ",
     title:"Frequently asked questions.",
@@ -136,15 +136,15 @@ const supportPages = [
 <section><div class="contact-section-label">01 / TECHNICAL ISSUES</div><h2>Product &amp; technical support</h2><p>遇到功能异常、操作错误、无法正常使用，或其他技术问题？</p><p>请尽可能描述问题发生的过程，并附上截图或录屏，帮助我们更快定位问题。</p><button class="copy-template" type="button" onclick="openContactForm('technical')">CONTACT THE TEAM ↗</button></section>
 <section><div class="contact-section-label">02 / ACCOUNT &amp; LICENSE</div><h2>Account &amp; license assistance</h2><p>购买后没有收到许可证？无法激活？需要找回许可证，或遇到账户相关问题？</p><p>请提供购买时使用的邮箱，以及相关订单信息，以便我们核实并协助处理。</p><button class="copy-template" type="button" onclick="openContactForm('account')">GET LICENSE HELP ↗</button></section>
 <section><div class="contact-section-label">03 / BEFORE YOU CONTACT US</div><h2>Help us understand the problem.</h2><p>填写下面的联系表单。你可以附上这些信息，帮助我们更快了解情况：</p><ul><li><strong>Your email</strong> — 用于接收我们的回复。</li><li><strong>Product version</strong> — 你目前使用的 colooon 版本。</li><li><strong>Operating system</strong> — 你的操作系统及版本。</li><li><strong>Problem description</strong> — 遇到了什么问题，以及如何复现。</li><li><strong>Screenshots or recordings</strong> — 如果方便，请附上相关截图或录屏。</li></ul><p class="contact-privacy-note">请勿在表单中提供密码、完整支付卡信息或其他敏感信息。</p>
-<form id="contactSupportForm" class="feedback-form contact-support-form" onsubmit="event.preventDefault();submitContactSupport()">
+<form id="contactSupportForm" class="feedback-form contact-support-form" onsubmit="event.preventDefault();submitSupportForm('contact', this)">
 <div><label for="csType">ISSUE TYPE / 问题类型</label><select id="csType" required><option value="">请选择问题类型</option><option value="technical">产品与技术问题</option><option value="account">账户与许可证</option><option value="other">其他问题</option></select></div>
 <div><label for="csEmail">YOUR EMAIL / 联系邮箱</label><input id="csEmail" type="email" placeholder="用于接收回复" required></div>
 <div><label for="csVersion">colooon VERSION / 产品版本</label><input id="csVersion" placeholder="例如 0.16.65"></div>
 <div><label for="csOS">OPERATING SYSTEM / 操作系统</label><input id="csOS" placeholder="例如 macOS 15 / Windows 11"></div>
 <div class="wide"><label for="csSubject">SUBJECT / 问题概述</label><input id="csSubject" placeholder="用一句话概括你遇到的问题" required></div>
 <div class="wide"><label for="csDescription">PROBLEM DESCRIPTION / 问题描述</label><textarea id="csDescription" placeholder="发生了什么？你当时在进行什么操作？如果知道如何复现，也可以写下来。" required></textarea></div>
-<div class="wide"><label for="csFiles">SCREENSHOTS OR RECORDINGS / 截图或录屏（选填）</label><input id="csFiles" type="file" accept="image/*,video/*,.pdf,.txt" multiple></div>
-<div class="wide"><button type="submit">PREPARE SUPPORT EMAIL ↗</button><p class="form-status" id="contactSupportStatus" role="status">此表单会准备邮件草稿。请在邮件应用中确认并发送。</p></div>
+<div class="wide"><label for="csFiles">SCREENSHOTS OR RECORDINGS / 截图或录屏（选填）</label><input id="csFiles" type="file" accept=".png,.jpg,.jpeg,.gif,.webp,.pdf,.mp4,.webm,.txt" multiple></div>
+<div class="wide"><button type="submit">SUBMIT REQUEST</button><p class="form-status" id="contactSupportStatus" role="status">支持 PNG、JPEG、GIF、WebP、PDF、MP4、WebM 和 TXT，最多 3 个文件，每个不超过 3 MB。</p></div>
 </form></section>
 <section class="contact-still-help"><div class="contact-section-label">STILL NEED HELP?</div><h2>Just reach out.</h2><p>如果你不确定问题属于哪一类，也没有关系。直接告诉我们发生了什么，我们会尽力为你找到合适的解决方式。</p></section>
 <p class="contact-signoff">Thank you for using colooon.<br><strong>colooon Team</strong></p>
@@ -157,6 +157,17 @@ function openSupport(i){
   const template=esc(item.template.replace(/\\n/g,'\n'));
   const writeBlock=(i===0||i===3||!item.template)?'':'<h3>WRITE IT DOWN</h3><p>如果你准备好了，可以先用下面的提纲整理想法。</p><div class="template-text" id="supportTemplate">'+template+'</div><button class="copy-template" type="button" onclick="copySupportTemplate()">COPY TEMPLATE ↗</button>';
   showDetail(`<div class="small-label">colooon / SUPPORT　—　${item.label}</div><h1 class="detail-title">${esc(item.title)}</h1><div class="detail-sub">${esc(item.sub)}</div><div class="support-detail">${item.body}${writeBlock}</div>`);
+  const form = document.querySelector('#detailBody form');
+  if (form) {
+    const trap = document.createElement('input');
+    trap.type = 'text';
+    trap.tabIndex = -1;
+    trap.hidden = true;
+    trap.autocomplete = 'off';
+    trap.setAttribute('aria-hidden', 'true');
+    trap.dataset.supportTrap = '';
+    form.append(trap);
+  }
   document.querySelector('.detail-panel').classList.toggle('faq-mode',i===2);
   document.getElementById('detail').classList.toggle('faq-detail-mode',i===2);
   if(i===2){document.getElementById('faqSearch').value='';document.getElementById('faqSearchResults').hidden=true;document.getElementById('faqHome').hidden=false;document.getElementById('faqCategoryView').hidden=true;}
@@ -243,15 +254,6 @@ function openFaqSearchResult(button){
  if(target){target.open=true;target.scrollIntoView({behavior:'smooth',block:'center'});}
 }
 
-function prepareSupportEmail(subject, fields, status, files) {
-  const body = fields.filter(Boolean).join('\n');
-  const url = 'mailto:support@colooon.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  const link = document.createElement('a');
-  link.href = url;
-  link.textContent = '打开邮件草稿 / Open email draft ↗';
-  status.replaceChildren(link);
-  status.append(files.length ? '。请在邮件中手动附上所选文件。' : '。请在邮件应用中确认并发送。');
-}
 function openContactForm(type){
   const form=document.getElementById('contactSupportForm');
   const select=document.getElementById('csType');
@@ -260,42 +262,78 @@ function openContactForm(type){
   const email=document.getElementById('csEmail');
   if(email) setTimeout(()=>email.focus({preventScroll:true}),250);
 }
-function submitContactSupport(){
-  const status=document.getElementById('contactSupportStatus');
-  const email=document.getElementById('csEmail').value.trim();
-  const subject=document.getElementById('csSubject').value.trim();
-  const description=document.getElementById('csDescription').value.trim();
-  if(!email||!subject||!description){status.textContent='请填写联系邮箱、问题概述和问题描述。';return;}
-  const form = document.getElementById('contactSupportForm');
-  prepareSupportEmail('[colooon Support] ' + subject, [
-    'Issue type: ' + form.querySelector('#csType').value,
-    'Reply email: ' + email,
-    'colooon version: ' + form.querySelector('#csVersion').value,
-    'Operating system: ' + form.querySelector('#csOS').value,
-    '', description
-  ], status, form.querySelector('#csFiles').files);
+const supportForms = {
+  contact: { fields: { category: 'csType', email: 'csEmail', subject: 'csSubject', message: 'csDescription', version: 'csVersion', environment: 'csOS' }, files: 'csFiles' },
+  feedback: { fields: { category: 'fbType', email: 'fbEmail', message: 'fbMessage', environment: 'fbVersion' }, files: 'fbFiles' },
+  story: { fields: { name: 'storyName', email: 'storyEmail', storyUrl: 'storyUrl', socialUrl: 'storySocial', message: 'storyNotes' }, files: 'storyFiles' },
+};
+const supportAttempts = new WeakMap();
+
+async function submitSupportForm(kind, form) {
+  const status = form.querySelector('[role="status"]');
+  const button = form.querySelector('[type="submit"]');
+  if (button.disabled) return;
+  const zh = document.documentElement.lang.startsWith('zh');
+  const say = (cn, en) => { status.textContent = zh ? cn : en; };
+  const spec = supportForms[kind];
+  const files = [...form.querySelector('#' + spec.files).files];
+  const maxFileBytes = 3 * 1024 * 1024;
+  if (files.length > 3 || files.some(file => file.size > maxFileBytes || !file.size)) {
+    say('最多可提交 3 个非空附件，每个不能超过 3 MB。', 'Attach up to 3 nonempty files of 3 MB or less each.');
+    return;
+  }
+  if (kind === 'feedback' && !form.querySelector('#fbMessage').value.trim() && !files.length) {
+    say('请填写反馈或添加附件。', 'Enter feedback or attach a file.');
+    return;
+  }
+  let attempt = supportAttempts.get(form);
+  if (!attempt) {
+    attempt = crypto.randomUUID();
+    supportAttempts.set(form, attempt);
+    form.addEventListener('input', () => supportAttempts.delete(form), { once: true });
+  }
+  const data = new FormData();
+  data.set('kind', kind);
+  data.set('submissionId', attempt);
+  data.set('website', form.querySelector('[data-support-trap]').value);
+  for (const [field, id] of Object.entries(spec.fields)) {
+    data.set(field, form.querySelector('#' + id).value.trim());
+  }
+  for (const file of files) data.append('attachments', file);
+
+  button.disabled = true;
+  form.setAttribute('aria-busy', 'true');
+  say('正在提交…', 'Submitting…');
+  try {
+    const response = await fetch('/api/support/submit', {
+      method: 'POST', body: data, signal: AbortSignal.timeout(22000),
+    });
+    const result = await response.json().catch(() => null);
+    if (response.status !== 201 || result?.ok !== true || typeof result.receipt !== 'string') {
+      if (response.status === 429) {
+        say('提交次数过多，请稍后重试。已填写的内容仍在表单中。', 'Too many attempts. Please try again later. Your entries are retained.');
+      } else if (['INVALID_FILE_TYPE', 'INVALID_FILE_SIZE', 'TOO_MANY_FILES', 'TOO_LARGE'].includes(result?.error) || response.status === 413) {
+        say('附件类型或大小不符合要求。请调整附件后重试。', 'Check the attachment types and sizes, then try again.');
+      } else if (response.status === 400) {
+        say('请检查必填项、邮箱和链接，再重试。', 'Check the required fields, email address, and URLs, then try again.');
+      } else {
+        say('提交失败。已填写的内容仍在表单中，请重试。', 'Submission failed. Your entries are retained. Please try again.');
+      }
+      return;
+    }
+    if (supportAttempts.get(form) === attempt) {
+      form.reset();
+      supportAttempts.delete(form);
+    }
+    say('已提交，我们已接收你的请求。', 'Submitted. We’ve received your request.');
+  } catch {
+    say('暂时无法确认提交结果。内容仍在表单中，请重试。', 'Could not confirm submission. Your entries are retained. Please try again.');
+  } finally {
+    button.disabled = false;
+    form.removeAttribute('aria-busy');
+  }
 }
-function submitOnlineFeedback(){
-  const status=document.getElementById('feedbackStatus');
-  if(!document.getElementById('fbMessage').value.trim() && !document.getElementById('fbFiles').files.length){status.textContent='请填写一点反馈，或选择一个附件。';return;}
-  const form = document.getElementById('feedbackForm');
-  prepareSupportEmail('[colooon Feedback]', [
-    'Feedback type: ' + form.querySelector('#fbType').value,
-    'Reply email: ' + form.querySelector('#fbEmail').value,
-    'Environment: ' + form.querySelector('#fbVersion').value,
-    '', form.querySelector('#fbMessage').value
-  ], status, form.querySelector('#fbFiles').files);
-}
-function submitStory() {
-  const form = document.getElementById('storyForm');
-  const labels = { storyName: 'Name', storyEmail: 'Reply email', storyUrl: 'Story URL',
-    storySocial: 'Social post URL', storyNotes: 'Additional information' };
-  const fields = Object.entries(labels).flatMap(([id, label]) => {
-    const value = form.querySelector('#' + id).value.trim();
-    return value ? [label + ': ' + value] : [];
-  });
-  prepareSupportEmail('[colooon Stories] Submission', fields, document.getElementById('storyStatus'), []);
-}
+
 function copySupportTemplate(){
   const el=document.getElementById('supportTemplate');
   const text=el?el.innerText:'';
