@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>colooon — 留住 AI 对话中的灵光</title>
-<meta content="安静地留住 AI 对话中的灵光。给想留下的见解上色，随时回到它们。" name="description"/>
+<title>colooon — Thoughts keep growing.</title>
+<meta content="你的 AI 对话随行笔记本。高亮、收藏、笔记、编辑。构建自己的 AI 灵感库。" name="description"/>
 <link href="/zh/" hreflang="zh-CN" rel="alternate"/>
 <link href="/" hreflang="en" rel="alternate"/>
 <style>
@@ -1723,18 +1723,155 @@
       .site-header .nav-links { flex-wrap: wrap; gap: 5px 12px; }
       .site-header .nav-links .purchase-link { display: inline-flex; }
     }
+    /* The Chinese homepage follows the V4 layout while reusing the product demos. */
+    .site-header .nav-links, footer, .hero-grid > div:first-child, .experience-intro,
+    .experience-card > div:last-child, .feature-copy, .final > .inner {
+      font-family: "Avenir Next", "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+    }
+    .site-header .nav-links, .footer-links {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: normal;
+    }
+    .site-header .nav-links .nav-cta, .hero-actions .button, .final .button {
+      font-weight: 650;
+      letter-spacing: .04em;
+      text-transform: none;
+    }
+    .hero-eyebrow, .experience-kicker, .experience-num, .feature-copy .section-kicker,
+    .final .section-kicker {
+      font: 11px/1.5 monospace;
+      letter-spacing: .15em;
+      color: #aaa8a1;
+    }
+    .site-header .nav-links .nav-cta { font-size: 12px !important; }
+    .hero {
+      min-height: 0;
+      padding: clamp(54px, 7vw, 100px) 0 64px;
+      text-align: center;
+    }
+    .hero-grid { grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 50px); }
+    .hero-eyebrow { margin-inline: auto; }
+    .hero h1 {
+      font-size: clamp(70px, 12vw, 174px);
+      line-height: .95;
+      letter-spacing: -.075em;
+      font-weight: 500;
+      text-transform: none;
+    }
+    .hero h1 span, .experience-intro em { color: var(--yellow); }
+    .hero-copy {
+      margin: 22px auto 24px;
+      font-size: 22px;
+      font-weight: 550;
+      line-height: 1.8;
+      letter-spacing: -.025em;
+    }
+    .hero-copy .break { font-size: 15px; font-weight: 400; letter-spacing: normal; color: #aaa8a1; }
+    .hero-actions { justify-content: center; }
+    .chat-stage {
+      width: min(920px, 100%);
+      min-height: 0;
+      margin-inline: auto;
+      padding-bottom: 34px;
+      text-align: left;
+    }
+    .chat-window { height: clamp(340px, 46vw, 455px); }
+    .chat-stage .moments-panel { right: 14px; bottom: 0; }
+
+    .experience-strip, .feature-section, .final {
+      background: var(--black);
+      color: var(--paper);
+      padding: clamp(48px, 6vw, 88px) 0;
+    }
+    .experience-strip { border-bottom: 1px solid rgba(245,244,239,.12); }
+    .experience-intro {
+      font-size: clamp(20px, 2.7vw, 36px);
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: -.025em;
+      margin: 22px 0 28px;
+    }
+    .experience-intro em { font-style: normal; }
+    .experience-grid {
+      gap: 16px;
+      min-height: 0;
+      background: transparent;
+      border: 0;
+    }
+    .experience-card, .experience-card:last-child {
+      min-height: 0;
+      color: var(--paper);
+      border: 1px solid rgba(245,244,239,.16);
+    }
+    .experience-card::before { content: none; }
+    .experience-stage {
+      height: 250px;
+      margin: 18px 0 24px;
+      background: var(--paper);
+      color: var(--black);
+    }
+    .experience-title {
+      font-size: 22px;
+      font-weight: 550;
+      line-height: 1.8;
+      letter-spacing: -.025em;
+    }
+    .experience-copy, .feature-copy .section-copy {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.8;
+      letter-spacing: normal;
+      color: #aaa8a1;
+    }
+    .feature-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+      gap: clamp(24px, 5vw, 66px);
+      align-items: center;
+    }
+    .feature-copy .clean-title, .final h2 {
+      font-size: clamp(30px, 4vw, 58px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+    }
+    .feature-copy .section-kicker, .final .section-kicker { margin: 0 0 20px; }
+    .feature-layout .immersive-read-wrap, .feature-layout .export-page-wrap { margin-top: 0; }
+    .feature-layout .read-demo {
+      grid-template-columns: minmax(125px, 28%) minmax(0, 1fr);
+      min-height: 0;
+    }
+    .feature-layout .read-logo { padding-inline: 10px; }
+    .feature-layout .read-logo .logo-mark { min-width: 0; }
+    .feature-layout .read-toolbar { flex-wrap: wrap; gap: 6px; height: auto; min-height: 72px; padding-block: 12px; }
+    .feature-layout .qa-card { overflow-wrap: anywhere; }
+
+    .final { min-height: 0; }
+    .final p { font-size: 15px; line-height: 1.8; letter-spacing: normal; color: #aaa8a1; }
+    .final .button { background: var(--paper); color: var(--black); border-color: var(--paper); }
+
+    @media (max-width: 980px) {
+      .feature-layout { grid-template-columns: minmax(0, 1fr); }
+      .feature-layout .read-demo { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .chat-stage .moments-panel { right: 0; }
+      .chat-window { height: 370px; }
+      .experience-card { padding: 18px; }
+    }
   </style>
-<script defer="" src="/language.js"></script>
+<script defer="" src="../language.js"></script>
 </head>
 <body>
 <header class="site-header">
 <nav class="nav">
-<a aria-label="colooon home" class="logo" href="/zh/"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></a>
+<a aria-label="colooon home" class="logo" href="/zh/"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="../colooon-wordmark.svg"/></a>
 <div class="nav-links">
-<a class="journal-link" href="/zh/journal/">日志</a>
+<a class="journal-link" href="./journey/index.html">Journey</a>
 <a class="journal-link purchase-link" href="/zh/purchase/">试用与购买</a>
         <a class="lang-switch" data-language-choice="en" href="/">EN</a>
-<a class="button nav-cta" href="#install">添加到 Chrome</a>
+<a class="button nav-cta" href="#install">添加到 Chrome ↗</a>
 </div>
 </nav>
 </header>
@@ -1742,12 +1879,12 @@
 <section class="hero">
 <div class="inner hero-grid">
 <div>
-<p class="hero-eyebrow">安静地留住 AI 对话中的灵光。</p>
-<h1>Colooon it.</h1>
-<p class="hero-copy">Color On<span class="break">给想留下的见解上色。</span></p>
+<p class="hero-eyebrow">你的 AI 对话随行笔记本</p>
+<h1>Colooon it<span>.</span></h1>
+<p class="hero-copy">高亮、收藏、笔记、编辑。<span class="break">构建自己的 AI 灵感库。</span></p>
 <div class="hero-actions">
-<a class="button" href="#install">添加到 Chrome</a>
-<a class="button outline-button" href="#demo">查看使用方式</a>
+<a class="button" href="#install">添加到 Chrome ↗</a>
+<a class="button outline-button" href="#demo">查看使用方式 ↓</a>
 </div>
 </div>
 <div class="chat-stage" id="demo">
@@ -1759,7 +1896,7 @@
 <div class="message">
 <div class="muted-line"></div>
 <div class="muted-line" style="width: 92%"></div>
-<p>有时，AI 会说出一些打开新视野的话。<span class="selected">有些话，你希望在对话继续之前先留下来。</span>
+<p>意识是世界得以显现的空间。<span class="selected">人类拥有体验。大型语言模型拥有表达，却没有体验。</span>
 </p>
 </div>
 <div class="message">
@@ -1799,9 +1936,11 @@
 </section>
 <section class="experience-strip" id="how">
 <div class="inner">
+<div class="experience-kicker">01 / COLOR ON · BACK · TO CHAT</div>
+<h2 class="experience-intro">有些想法，<em>值得留下来。</em></h2>
 <div aria-label="colooon Alpha 1 core loop" class="experience-grid">
 <article class="experience-card">
-<div class="experience-num">01</div>
+<div class="experience-num">01 / COLOR ON</div>
 <div class="experience-stage">
 <div aria-label="Color On demo" class="mini-browser">
 <div class="mini-browser-top"><span></span><span></span><span></span></div>
@@ -1809,20 +1948,20 @@
 <div class="ghost-line long"></div>
 <div class="ghost-line short"></div>
 <p>
-                    A line stands out inside the conversation.
-                    <span class="live-highlight">给你想留下的见解上色。</span>
+                    意识是世界得以显现的空间。
+                    <span class="live-highlight">人类拥有体验。</span>
 </p>
 </div>
 <div class="mini-color-pop"><b>Color On</b><span>笔记</span></div>
 </div>
 </div>
 <div>
-<h3 class="experience-title">Color On</h3>
-<p class="experience-copy">那些你想留下的见解。</p>
+<h3 class="experience-title">为值得留下的片段上色。</h3>
+<p class="experience-copy">选中 AI 对话中的文字，上色即剪藏。</p>
 </div>
 </article>
 <article class="experience-card">
-<div class="experience-num">02</div>
+<div class="experience-num">02 / BACK</div>
 <div class="experience-stage">
 <div aria-label="BACK demo" class="back-stage">
 <div class="saved-moment-mini">
@@ -1843,12 +1982,12 @@
 </div>
 </div>
 <div>
-<h3 class="experience-title">Back</h3>
-<p class="experience-copy">回到原始对话。</p>
+<h3 class="experience-title">回到它出现的地方。</h3>
+<p class="experience-copy">重新访问原始对话，找回片段前后的语境。</p>
 </div>
 </article>
 <article class="experience-card">
-<div class="experience-num">03</div>
+<div class="experience-num">03 / TO CHAT</div>
 <div class="experience-stage">
 <div aria-label="TO CHAT demo" class="tochat-stage">
 <div class="tochat-saved">
@@ -1863,25 +2002,25 @@
 </div>
 </div>
 <div>
-<h3 class="experience-title">To Chat</h3>
-<p class="experience-copy">把保存的瞬间带回对话。</p>
+<h3 class="experience-title">从原来的思路继续。</h3>
+<p class="experience-copy">把保存的内容带回对话，让一个想法成为下一个问题的起点。</p>
 </div>
 </article>
 </div>
 </div>
 </section>
-<section class="section paper-section" id="read" style="padding-top: 0;">
-<div class="inner">
-<div class="split" style="margin-bottom: 54px;">
+<section class="section dark-section feature-section" id="read">
+<div class="inner feature-layout">
+<div class="feature-copy">
 <div>
-<div class="section-kicker">READ</div>
-<h2 class="section-title clean-title">你涂上颜色的片段，都在这里。</h2>
+<div class="section-kicker">02 / COLORED MOMENTS</div>
+<h2 class="section-title clean-title">那些你想留下的，都在这里。</h2>
 </div>
-<p class="section-copy">阅读、回到原始对话、继续聊天，或导出——都在同一个地方。</p>
+<p class="section-copy">保存的片段汇集在同一个空间。搜索、整理、添加笔记，重新阅读，或回到原始对话。问题、回答与笔记，不再只是孤立的文字。</p>
 </div>
 <div class="read-demo">
 <aside class="read-side">
-<div aria-label="colooon" class="read-logo"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></div>
+<div aria-label="colooon" class="read-logo"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="../colooon-wordmark.svg"/></div>
 <div class="read-side-title"><span>Colored Moments</span><span>11</span></div>
 <div class="read-list">
 <div class="read-item active">Saving Meaningful Moments</div>
@@ -1933,34 +2072,33 @@
 </div>
 </div>
 </section>
-<section class="section dark-section" id="read-immersive">
-<div class="inner">
-<div class="split">
+<section class="section dark-section feature-section" id="read-immersive">
+<div class="inner feature-layout">
+<div class="feature-copy">
 <div>
-<div class="section-kicker">READ</div>
+<div class="section-kicker">03 / READ</div>
 <h2 class="section-title clean-title dark-clean-title">沉浸式阅读。</h2>
 </div>
-<p class="section-copy">以更安静、更沉浸的方式，重新阅读你留下的见解。</p>
+<p class="section-copy">离开原本的聊天界面，在一个更安静、更沉浸的阅读空间里，重新阅读你留下的内容。</p>
 </div>
 <div class="immersive-read-wrap">
-<img alt="Immersive reading view showing saved moments in a quiet reading layout" src="/read-immersive.png"/>
+<img alt="Immersive reading view showing saved moments in a quiet reading layout" src="../read-immersive.png"/>
 </div>
 </div>
 </section>
-<section class="section dark-section" id="export">
-<div class="inner">
-<div class="split">
+<section class="section dark-section feature-section" id="export">
+<div class="inner feature-layout">
+<div class="feature-copy">
 <div>
-<div class="section-kicker">EXPORT</div>
-<h2 class="section-title clean-title dark-clean-title">需要时，随时导出。</h2>
+<div class="section-kicker">04 / EXPORT</div>
+<h2 class="section-title clean-title dark-clean-title">把留下的内容带走。</h2>
 </div>
 <p class="section-copy">
-            Export as MD, PDF,<br/>
-            or IMAGE.
+            导出为 Markdown、PDF 或图片，加入你的工作流，或与他人分享。
           </p>
 </div>
 <div class="export-page-wrap">
-<img alt="Export view showing MD, PDF, and image export options" src="/export-page.png"/>
+<img alt="Export view showing MD, PDF, and image export options" src="../export-page.png"/>
 </div>
 </div>
 </section>
@@ -1972,30 +2110,31 @@
 <div class="bubble">How do you love someone</div>
 <div class="bubble">Where did the universe go</div>
 <div class="bubble">Why do people die</div>
-<div aria-label="colooon" class="orbit-logo"><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></div>
+<div aria-label="colooon" class="orbit-logo"><img alt="colooon" class="logo-mark" src="../colooon-wordmark.svg"/></div>
 </div>
 </div>
 </section>
 <section class="final" id="install">
 <div class="inner">
-<h2>对话会结束，思考不必。</h2>
-<p>保存一个瞬间，回到原处，继续思考。</p>
-<a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">添加到 Chrome</a>
+<div class="section-kicker">THOUGHTS KEEP GROWING.</div>
+<h2>让思想持续生长</h2>
+<p>从一个被留下的瞬间出发，让想法继续生长。</p>
+<a class="button" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">添加到 Chrome ↗</a>
 </div>
 </section>
 </main>
 <footer>
 <div class="foot">
-<div aria-label="colooon" class="footer-brand"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="/colooon-wordmark.svg"/></div>
-<span>留住 AI 对话中的灵光，随时回到它们。</span>
+<div aria-label="colooon" class="footer-brand"><span aria-hidden="true" class="logo-dots"><span></span><span></span></span><img alt="colooon" class="logo-mark" src="../colooon-wordmark.svg"/></div>
+<span>你的 AI 对话随行笔记本</span>
 <div class="footer-links">
         <a href="/zh/terms/">服务条款</a>
 <a href="/zh/refunds/">退款政策</a>
 <a href="/zh/purchase/">试用与购买</a>
-<a href="/zh/journal/">开发日记</a>
+<a href="./journey/index.html">Journey</a>
 <a href="./privacy/index.html">隐私政策</a>
 <a href="./support/index.html">支持</a>
-<a href="mailto:support@colooon.com">support@colooon.com</a>
+<a href="mailto:support@colooon.com">联系我们</a>
 <a href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Chrome 网上应用店</a>
 </div>
 </div>

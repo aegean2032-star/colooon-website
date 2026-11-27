@@ -17,5 +17,17 @@
       "source": "/api/recovery/redeem",
       "destination": "https://colooon-license.colooon.workers.dev/api/recovery/redeem"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/journal",
+      "destination": "/zh/journey/",
+      "permanent": false
+    },
+    {
+      "source": "/zh/journal",
+      "destination": "/zh/journey/",
+      "permanent": false
+    }
   ]
 }
