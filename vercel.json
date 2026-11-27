@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/config",
+      "destination": "https://colooon-license.colooon.workers.dev/api/config"
+    },
+    {
+      "source": "/api/checkout",
+      "destination": "https://colooon-license.colooon.workers.dev/api/checkout"
+    },
+    {
+      "source": "/api/recovery/request",
+      "destination": "https://colooon-license.colooon.workers.dev/api/recovery/request"
+    },
+    {
+      "source": "/api/recovery/redeem",
+      "destination": "https://colooon-license.colooon.workers.dev/api/recovery/redeem"
+    }
+  ]
+}

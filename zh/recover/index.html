@@ -8,6 +8,7 @@
   <title>找回许可证 · colooon</title>
   <link rel="stylesheet" href="/purchase/checkout.css">
   <script src="/language.js" defer></script>
+  <script src="/purchase/recovery.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -31,9 +32,23 @@
     <section class="workspace" aria-labelledby="recovery-title">
       <div class="intro">
         <h1 id="recovery-title">找回许可证</h1>
-        <p>许可证找回将在购买开放后提供。</p>
+        <p id="recovery-unavailable">许可证找回将在购买开放后提供。</p>
+        <p id="recovery-instructions" hidden>使用下单时填写的邮箱获取找回链接。</p>
       </div>
       <div class="card">
+        <div id="recovery-actions" hidden>
+          <form id="recovery-form" method="post">
+            <label for="order-email">订单邮箱</label>
+            <input id="order-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+            <button class="button primary" type="submit" disabled>发送找回链接</button>
+          </form>
+          <button id="redeem-recovery" class="button primary" type="button" hidden>领取许可证</button>
+          <div id="recovered-license" class="license-control" hidden>
+            <input id="license-code" class="license-field" type="text" aria-label="许可证代码" readonly>
+            <button id="copy-license" class="button" type="button">复制许可证</button>
+          </div>
+          <p id="recovery-feedback" class="feedback" role="status"></p>
+        </div>
         <p><a class="text-link" href="/zh/support/">联系支持</a></p>
         <a class="text-link" href="/zh/purchase/">返回试用与购买</a>
       </div>
