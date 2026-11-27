@@ -14,10 +14,10 @@
 <!-- site-header -->
 <header class="site-chrome site-chrome-header">
   <div class="site-chrome-inner">
-    <a class="site-chrome-logo" href="/zh/" aria-label="colooon · 首页"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <a class="site-chrome-logo notranslate" translate="no" href="/zh/" aria-label="colooon · 首页"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
     <nav class="site-chrome-links" aria-label="主导航">
       <a href="/zh/">首页</a>
-      <a href="/zh/journey/" aria-current="page">Journey</a>
+      <a href="/zh/journey/" aria-current="page"><span class="notranslate" translate="no">Journey</span></a>
       <a href="/zh/purchase/">试用与购买</a>
       <a href="/journey/" data-language-choice="en" lang="en">EN</a>
       <a class="site-chrome-install" href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">添加到 Chrome</a>
@@ -26,10 +26,10 @@
 </header>
 <!-- /site-header -->
 <main class="shell">
-<section class="journey-page" id="journeyPage"><div class="page-intro"><div><div class="eyebrow">COLOOON / JOURNEY — 2026</div><h1>Journey<span style="color:var(--yellow)">.</span></h1></div><p>记录 colooon 的稳定功能、理念与持续演进。</p></div>
+<section class="journey-page" id="journeyPage"><div class="page-intro"><div><div class="eyebrow"><span class="notranslate" translate="no">colooon</span> / <span class="notranslate" translate="no">JOURNEY</span> — 2026</div><h1 class="notranslate" translate="no">Journey<span style="color:var(--yellow)">.</span></h1></div><p>记录 <span class="notranslate" translate="no">colooon</span> 的稳定功能、理念与持续演进。</p></div>
 <div class="page-switch" role="tablist" aria-label="Journey sections"><button class="active" data-tab="features" role="tab" aria-selected="true">FEATURES / 功能</button><button data-tab="ideas" role="tab" aria-selected="false">IDEAS / 理念</button><button data-tab="updates" role="tab" aria-selected="false">UPDATES / 更新</button><button data-tab="support" role="tab" aria-selected="false">SUPPORT / 支持</button></div>
-<div class="features-page journey-panel" id="featuresPage"><div class="section-head"><div><div class="eyebrow">01 / FEATURE GUIDES</div><h2>Features.</h2></div><p>已经落定的功能说明。了解 colooon 如何捕捉、整理、重访与延续 AI 对话中的思想。</p></div><div class="guide-grid" id="guideCards"></div></div>
-<div class="ideas-page journey-panel hidden" id="ideasPage"><div class="section-head"><div><div class="eyebrow">02 / IDEAS — COLOOON JOURNAL</div><h2>Ideas.</h2></div><p>关于思想、设计与人与 AI 的持续探索。</p></div><div class="grid3" id="ideaCards"></div></div>
+<div class="features-page journey-panel" id="featuresPage"><div class="section-head"><div><div class="eyebrow">01 / FEATURE GUIDES</div><h2>Features.</h2></div><p>已经落定的功能说明。了解 <span class="notranslate" translate="no">colooon</span> 如何捕捉、整理、重访与延续 AI 对话中的思想。</p></div><div class="guide-grid" id="guideCards"></div></div>
+<div class="ideas-page journey-panel hidden" id="ideasPage"><div class="section-head"><div><div class="eyebrow">02 / IDEAS — <span class="notranslate" translate="no">colooon</span> JOURNAL</div><h2>Ideas.</h2></div><p>关于思想、设计与人与 AI 的持续探索。</p></div><div class="grid3" id="ideaCards"></div></div>
 <div class="updates-page journey-panel hidden" id="updatesPage"><div class="section-head"><div><div class="eyebrow">03 / PRODUCT & RELEASE NOTES</div><h2>Updates.</h2></div><p>记录我们如何发现问题、修复问题，并让产品持续变得更可靠。</p></div><div class="updates-grid" id="releaseCards"></div></div>
 <div class="support-page journey-panel hidden" id="supportPage">
   <div class="section-head">
@@ -38,24 +38,24 @@
   </div>
   <div class="support-grid">
     <button class="support-tile" type="button" onclick="openSupport(2)">
-      <span class="support-index">01 / FAQ</span><span class="support-symbol">↗</span>
+      <span class="support-index">01 / FAQ</span>
       <h3>Frequently asked questions</h3><p>查找关于产品使用、数据、隐私及许可证的答案。</p>
-      <span class="support-action">FIND ANSWERS ↗</span>
+      <span class="support-action">FIND ANSWERS<span class="site-chevron" aria-hidden="true"></span></span>
     </button>
     <button class="support-tile" type="button" onclick="openSupport(3)">
-      <span class="support-index">02 / CONTACT SUPPORT</span><span class="support-symbol">↗</span>
+      <span class="support-index">02 / CONTACT SUPPORT</span>
       <h3>Contact support</h3><p>需要人工帮助？联系我们解决具体问题。</p>
-      <span class="support-action">CONTACT THE TEAM ↗</span>
+      <span class="support-action">CONTACT THE TEAM<span class="site-chevron" aria-hidden="true"></span></span>
     </button>
     <button class="support-tile" type="button" onclick="openSupport(0)">
-      <span class="support-index">03 / FEEDBACK</span><span class="support-symbol">↗</span>
+      <span class="support-index">03 / FEEDBACK</span>
       <h3>Send feedback</h3><p>一个使用感受、一个不顺手的地方，或是一个突然冒出来的想法。我们很想听听。</p>
-      <span class="support-action">SEND FEEDBACK ↗</span>
+      <span class="support-action">SEND FEEDBACK<span class="site-chevron" aria-hidden="true"></span></span>
     </button>
     <button class="support-tile" type="button" onclick="openSupport(1)">
-      <span class="support-index">04 / COLOOON STORIES</span><span class="support-symbol">↗</span>
-      <h3>Earn a free license</h3><p>分享你的 colooon 使用故事，参与活动，有机会赢取免费的 colooon Pro 永久许可证。</p>
-      <span class="support-action">JOIN THE PROGRAM ↗</span>
+      <span class="support-index">04 / <span class="notranslate" translate="no">colooon</span> STORIES</span>
+      <h3>Earn a free license</h3><p>分享你的 <span class="notranslate" translate="no">colooon</span> 使用故事，参与活动，有机会赢取免费的 <span class="notranslate" translate="no">colooon</span> Pro 永久许可证。</p>
+      <span class="support-action">JOIN THE PROGRAM<span class="site-chevron" aria-hidden="true"></span></span>
     </button>
   </div>
 </div>
@@ -66,13 +66,18 @@
 <!-- site-footer -->
 <footer class="site-chrome site-chrome-footer">
   <div class="site-chrome-inner">
-    <a class="site-chrome-logo" href="/zh/" aria-label="colooon · 首页"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+    <div class="site-chrome-brand">
+      <a class="site-chrome-logo notranslate" translate="no" href="/zh/" aria-label="colooon · 首页"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>
+      <p>你的 AI 对话随行笔记本</p>
+    </div>
     <nav class="site-chrome-links" aria-label="网站服务">
       <a href="/zh/terms/">服务条款</a>
       <a href="/zh/refunds/">退款政策</a>
       <a href="/zh/privacy/">隐私政策</a>
       <a href="/zh/recover/">找回许可证</a>
       <a href="/zh/support/">支持</a>
+      <a href="mailto:support@colooon.com">support@colooon.com</a>
+      <a href="https://chromewebstore.google.com/detail/khenfhbjoefjfkhpjefmnjlkdonehfok">Chrome 网上应用店<span aria-hidden="true" class="site-external-arrow">↗</span></a>
     </nav>
   </div>
 </footer>

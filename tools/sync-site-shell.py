@@ -14,7 +14,7 @@ def chrome(zh,route):
     label='首页' if zh else 'Home'
     buy='试用与购买' if zh else 'Trial &amp; Purchase'
     install='添加到 Chrome' if zh else 'Add to Chrome'
-    home_link=f'<a class="site-chrome-logo" href="{home}" aria-label="colooon · {label}"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>'
+    home_link=f'<a class="site-chrome-logo notranslate" translate="no" href="{home}" aria-label="colooon · {label}"><span class="site-chrome-dots" aria-hidden="true"></span><img src="/colooon-wordmark.svg" alt="colooon" width="119"></a>'
     def link(url,title,r):
         return f'<a href="{url}"'+(' aria-current="page"' if route==r else '')+f'>{title}</a>'
     language='en' if zh else 'zh'
@@ -24,7 +24,7 @@ def chrome(zh,route):
     {home_link}
     <nav class="site-chrome-links" aria-label="{'主导航' if zh else 'Primary navigation'}">
       {link(home,label,'')}
-      {link(journey,'Journey','journey')}
+      {link(journey,'<span class="notranslate" translate="no">Journey</span>','journey')}
       {link(purchase,buy,'purchase')}
       <a href="{other}" data-language-choice="{language}" lang="{'en' if zh else 'zh-CN'}">{'EN' if zh else '中文'}</a>
       <a class="site-chrome-install" href="{store}">{install}</a>
@@ -34,12 +34,19 @@ def chrome(zh,route):
 <!-- /site-header -->'''
     labels=('服务条款','退款政策','隐私政策','找回许可证','支持') if zh else ('Terms','Refunds','Privacy','Recover license','Support')
     legal='\n      '.join(link(zhroute(r,zh),t,r) for r,t in zip(('terms','refunds','privacy','recover','support'),labels))
+    positioning = '你的 AI 对话随行笔记本' if zh else 'Your AI conversation notebook.'
+    chrome_store = 'Chrome 网上应用店' if zh else 'Chrome Web Store'
     footer=f'''<!-- site-footer -->
 <footer class="site-chrome site-chrome-footer">
   <div class="site-chrome-inner">
-    {home_link}
+    <div class="site-chrome-brand">
+      {home_link}
+      <p>{positioning}</p>
+    </div>
     <nav class="site-chrome-links" aria-label="{'网站服务' if zh else 'Site services'}">
       {legal}
+      <a href="mailto:support@colooon.com">support@colooon.com</a>
+      <a href="{store}">{chrome_store}<span aria-hidden="true" class="site-external-arrow">↗</span></a>
     </nav>
   </div>
 </footer>
